@@ -6,6 +6,27 @@
 		cursor.style.left = `${e.clientX}px`; /* Set the cursor position */
 		cursor.style.top = `${e.clientY}px`;
 	});
+
+	document.addEventListener("DOMContentLoaded", () => {
+		const counters = document.querySelectorAll('.counter');
+		counters.forEach(counter => {
+			const updateCount = () => {
+				const target = +counter.getAttribute('data-target');
+				const count = +counter.innerText;
+				const speed = 500;
+				const increment = target / speed;
+
+				if (count < target) {
+					counter.innerText = Math.ceil(count + increment);
+					setTimeout(updateCount, 10);
+				} else {
+					counter.innerText = target;
+				}
+			};
+
+			updateCount();
+		});
+	});
 </script>
 
 <head>
@@ -41,15 +62,15 @@
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-680Y9K4F3Y"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-			gtag("config", "G-680Y9K4F3Y");
-		</script> -->
+            gtag("config", "G-680Y9K4F3Y");
+        </script> -->
 
 	<!-- favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
@@ -72,6 +93,28 @@
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" /> -->
 	<!-- custom css -->
 	<link rel="stylesheet" href="/styles.css" />
+	<style>
+		.counter {
+			font-size: 2rem;
+			color: rgb(0, 0, 0);
+		}
+
+		.metrics-container {
+			display: flex;
+			justify-content: center;
+			margin: 20px 0;
+			gap: 10%;
+		}
+
+		.metric {
+			text-align: center;
+		}
+
+		.metric .icon {
+			font-size: 3rem;
+			color: rgb(0, 0, 0);
+		}
+	</style>
 </head>
 
 <body>
@@ -169,6 +212,35 @@
 					</a>
 				</li>
 			</ul>
+		</div>
+		</div>
+	</section>
+
+	<section class="metrics-container">
+		<div class="metric">
+			<div class="icon">👩🏻‍💻</div>
+			<div class="counter" data-target="4">0</div>
+			<div>Years of Experience</div>
+		</div>
+		<div class="metric">
+			<div class="icon">🛠️</div>
+			<div class="counter" data-target="2">0</div>
+			<div>Projects Currently <br />Building</div>
+		</div>
+		<div class="metric">
+			<div class="icon">💡</div>
+			<div class="counter" data-target="21">0</div>
+			<div>Crazy Ideas <br /> Brewing</div>
+		</div>
+		<div class="metric">
+			<div class="icon">🌑</div>
+			<div class="counter" data-target="42">0</div>
+			<div>Sleepless Nights</div>
+		</div>
+		<div class="metric">
+			<div class="icon">☕</div>
+			<div class="counter" data-target="165">0</div>
+			<div>Cups of Coffee</div>
 		</div>
 	</section>
 
@@ -803,6 +875,7 @@
 		document.getElementById("currentYear").textContent = currentYear;
 	</script>
 	<!-- <script src="/bootstrap/js/bootstrap.min.js"></script> -->
+</body>
 </body>
 
 </html>
