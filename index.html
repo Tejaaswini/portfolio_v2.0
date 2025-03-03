@@ -1,917 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<script>
-	document.addEventListener("mousemove", (e) => {
-		const cursor = document.querySelector(".circle-cursor");
-		cursor.style.left = `${e.clientX}px`; /* Set the cursor position */
-		cursor.style.top = `${e.clientY}px`;
-	});
-
-	document.addEventListener("DOMContentLoaded", () => {
-		const counters = document.querySelectorAll('.counter');
-		counters.forEach(counter => {
-			const updateCount = () => {
-				const target = +counter.getAttribute('data-target');
-				const count = +counter.innerText;
-				const speed = 500;
-				const increment = target / speed;
-
-				if (count < target) {
-					counter.innerText = Math.ceil(count + increment);
-					setTimeout(updateCount, 10);
-				} else {
-					counter.innerText = target;
-				}
-			};
-
-			updateCount();
-		});
-	});
-</script>
 
 <head>
 	<meta charset="UTF-8" />
+	<meta name="description" content="Academic Profile" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Tejaaswini Narendran</title>
-	<meta name="description"
-		content="Tejaaswini Narendran is a full-stack developer based out of Washington D.C. She is currently purusing her Masters in Computer Science at George Washington University. She is passionate about building highly performant & scalable applications that solve real-world problems & provide users with an unforgettable experience. She is currently looking for full-time opportunities as a Software Engineer." />
-	<meta name="keywords"
-		content="portfolio, resume, cv, web engineer, software engineer, developer , web developer, blockchain, web3, personal website, Tejaaswini Narendran, george washington university, gale, washington dc, react, html, css, javascript, node, aws, amazon web services, medium, full stack, front-end, front end, full-stack, backend, back-end, python, go, java, web applications, web development, software development, web3, united states, full-time, internships, django, scalable, performance, user experience, ux, ui, design, web design, web designer, docker, typescript, vue, drupal, fastify, rest, apis, sql, mysql, postgresql, relational databases, git, github, postman, eslint, webpack, tailwind css, rxjs, rust, react, vue, nuxt, redux, mob-x, drupal, fastify, rest, apis, sql, mysql, postgresql, relational databases, git, github, postman, eslint, webpack, ant design, tailwind css, rxjs, rust, react, vue, nuxt, redux, mob-x, drupal, fastify, rest, apis, sql, mysql, postgresql, relational databases, git, github, postman, eslint, webpack, ant design, tailwind css, rxjs, rust, react, vue, nuxt, redux, mob-x, drupal, fastify, rest, apis, sql, mysql, postgresql, relational databases, git, github, postman, eslint, webpack, ant design, tailwind css, rxjs, rust, react, vue, nuxt, redux, mob-x, drupal, fastify, rest, apis, sql, mysql, postgresql, relational databases, git, github, postman, eslint, webpack, ant design, tailwind css, rxjs, rust, react, vue, nuxt, redux, mob-x, drupal, fastify, rest, apis, sql, mysql, postgresql, relational databases, git, github, postman, eslint, webpack, ant design, tailwind css, rxjs, rust, react, vue, nuxt, redux, mob-x, drupal, fastify, rest, apis, sql, mysql, postgresql, relational databases, git, github, postman, eslint, webpack, ant design, tailwind css, rxjs, rust, react, vue, nuxt, redux, mob-x, drupal, fastify, rest, apis, sql, mysql, postgresql, relational databases, git, github, postman, eslint, webpack, ant design, tailwind css, rxjs, rust, react, vue, nuxt, redux, mob-x, drupal, fastify, rest, apis, sql, mysql, postgresql, relational databases, git, github, postman, eslint, follo, tezos" />
+	<meta name="keywords" 
+    content="Tejaaswini Narendran, Tej, TJ, portfolio, resume, CV, software engineer, backend developer, distributed systems, security, autonomous vehicles, AI contract automation, event-driven systems, PostgreSQL, FastAPI, Python, Go, Java, Rust, C++, ROS2, Jetson Nano, Raspberry Pi, PX4, Vicon, robotics, drones, rovers, AI, ML, NLP, deep learning, full stack, scalable applications, performance optimization, user experience, UX, UI, API design, REST, GraphQL, cloud computing, AWS, Docker, Kubernetes, CI/CD, microservices, event-driven architecture, circuit breakers, logging, authentication, rate limiting, security best practices, cryptography, smart contracts, research, blockchain security, George Washington University, MathWorks, YC startup, DocuSign alternative, OpenAI, NLP-driven automation, contracts, negotiation, payments, SQL, MySQL, NoSQL, Kafka, RabbitMQ, Redis, GitHub, Git, Agile, TDD, software architecture, system design, technical writing, book author, Blockchain for Beginners, Art of Decentralization and Cryptography." />
 	<meta name="author" content="Tejaaswini Narendran" />
+	<meta name="robots" content="index, follow" />
+	
+	<title>Tejaaswini</title>
+	<!-- CSS for our page -->
+	<link rel="stylesheet" href="styles.css" />
 
-	<!-- Site Name, Title, and Description to be displayed -->
-	<meta property="og:site_name" content="Tejaaswini Narendran" />
-	<meta property="og:title" content="Tejaaswini Narendran" />
-	<meta property="og:description"
-		content="Tejaaswini Narendran is a full-stack developer based out of Washington D.C. She is currently purusing her Masters in Computer Science at George Washington University. She is passionate about building highly performant & scalable applications that solve real-world problems & provide users with an unforgettable experience. She is currently looking for full-time opportunities as a Software Engineer." />
-
-	<!-- Image to display -->
-	<meta property="og:image" content="" />
-
-	<!-- No need to change anything here -->
-	<meta property="og:type" content="website" />
-	<meta property="og:image:type" content="image/jpeg" />
-
-	<!-- Size of image. Any size up to 300. Anything above 300px will not work in WhatsApp -->
-	<meta property="og:image:width" content="300" />
-	<meta property="og:image:height" content="300" />
-
-	<!-- Website to visit when clicked in fb or WhatsApp-->
-	<meta property="og:url" content="http://tejaaswini.com" />
-	<!--  -->
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-680Y9K4F3Y"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
-
-            gtag("config", "G-680Y9K4F3Y");
-        </script> -->
-
-	<!-- favicon -->
-	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
-	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
-
-	<!-- font-awesome -->
-	<!-- <link rel="stylesheet" href="fontawesome/css/all.css" /> -->
-
-	<!-- bootstrap -->
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
-
-	<!-- google font -->
-	<link
-		href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
-		rel="stylesheet" />
-	<!-- animate.css library -->
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" /> -->
-	<!-- custom css -->
-	<link rel="stylesheet" href="/styles.css" />
-	<style>
-		.counter {
-			font-size: 2rem;
-			color: rgb(0, 0, 0);
-		}
-
-		.metrics-container {
-			display: flex;
-			justify-content: center;
-			margin: 20px 0;
-			gap: 10%;
-		}
-
-		.metric {
-			text-align: center;
-		}
-
-		.metric .icon {
-			font-size: 3rem;
-			color: rgb(0, 0, 0);
-		}
-	</style>
+	<!-- Font Awesome for icons (v6 example) -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- Optional: Include a Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-	<div class="circle-cursor"></div>
-	<nav id="navigation-bar">
-		<div id="nav-bar-links">
-			<ul>
-				<a class="nav-item" href="#head-section">home</a>
-				<a class="nav-item" href="#about-section">about</a>
-				<a class="nav-item" href="#research-section">research</a>
-				<a class="nav-item" href="#work-section">experience</a>
-				<a class="nav-item" href="#projects">projects</a>
-				<a class="nav-item" href="#icebreaker-section">ice-breaker</a>
-			</ul>
+
+	<!-- Dark Navigation Bar -->
+	<nav class="navbar">
+		<div class="nav-left">
+			<span class="nav-name">Tejaaswini Narendran</span>
+		</div>
+		<div class="nav-middle">
+			<a href="#">Research</a>
+			<a href="#">Projects</a>
+			<a href="#">Experience</a>
+			<a href="#">Blogs</a>
+			<a href="#">Ice Breaker</a>
 		</div>
 	</nav>
 
-	<section class="container" id="home-section">
-		<div class="home-desc">
-			<div id="my-paragraph">
-				<h6 class="h6" , style="color: #718388;">Ahoy, I am</h6>
-				<h2 id="name" class="h1">
-					Tejaaswini.
-					<!-- Speaker icon -->
-					<img src="./images/speaker-svgrepo-com.svg" alt="Speaker Icon" class="speaker-icon"
-						onclick="playSound()">
-					<br />
-					<p style="color: #718388; margin-right: -2rem;">Crafting Digital Experiences.</p>
-				</h2>
-				<h5 id="desc">
-					"I'm a <span style="color: #718388; font-weight: bold;">backend developer</span> proficient in
-					constructing <span style="color: #718388; font-weight: bold;">high-performance and <br /> scalable
-						systems</span> that solve real-world
-					problems while also delivering users <br /> with <span
-						style="color: #718388; font-weight: bold;">chic and elegant
-						experiences</span>."
-				</h5>
-				<div class="container_mouse">
-					<span class="mouse-btn">
-						<span class="mouse-scroll"></span>
-					</span>
-				</div>
-			</div>
-		</div>
+	<!-- Main Content Container -->
+	<div class="container">
 
-		<audio id="audio" src="./images/name.mp3"></audio>
-
-		<script>
-			function playSound() {
-				var audio = document.getElementById("audio");
-				audio.play();
-			}
-		</script>
-
-		<style>
-			.speaker-icon {
-				width: 24px;
-				/* Adjust the width as needed */
-				height: auto;
-				/* Automatically adjust the height */
-				cursor: pointer;
-				margin-left: 5px;
-				/* Adjust the margin to position the icon */
-			}
-		</style>
-
-		<div orientation="left" class="diTjzw">
-			<ul class="fLVsLB">
-				<li>
-					<a href="https://github.com/Tejaaswini" aria-label="GitHub" target="_blank" rel="noreferrer">
-						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-github"
-							viewBox="0 0 16 16">
-							<path
-								d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-						</svg>
-					</a>
-				</li>
-				<li>
-					<a href="https://www.linkedin.com/in/tejaaswini" aria-label="Linkedin" target="_blank"
-						rel="noreferrer">
-						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black"
-							class="bi bi-linkedin" viewBox="0 0 16 16">
-							<path
-								d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-						</svg>
-					</a>
-				</li>
-				<li>
-					<a href="https://medium.com/@tejnaren07" aria-label="Medium" target="_blank" rel="noreferrer">
-						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-medium"
-							viewBox="0 0 16 16">
-							<path
-								d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8zm4.95 0c0 2.34-1.01 4.236-2.256 4.236-1.246 0-2.256-1.897-2.256-4.236 0-2.34 1.01-4.236 2.256-4.236 1.246 0 2.256 1.897 2.256 4.236zM16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795z" />
-						</svg>
-					</a>
-				</li>
-			</ul>
-		</div>
-		</div>
-	</section>
-
-	<section class="metrics-container">
-		<!-- <div class="metric">
-			<div class="icon">👩🏻‍💻</div>
-			<div class="counter" data-target="4">0</div>
-			<div>Years of Experience</div>
-		</div>
-		<div class="metric">
-			<div class="icon">🛠️</div>
-			<div class="counter" data-target="2">0</div>
-			<div>Projects Currently <br />Building</div>
-		</div>
-		<div class="metric">
-			<div class="icon">💡</div>
-			<div class="counter" data-target="21">0</div>
-			<div>Crazy Ideas <br /> Brewing</div>
-		</div>
-		<div class="metric">
-			<div class="icon">🌑</div>
-			<div class="counter" data-target="42">0</div>
-			<div>Sleepless Nights</div>
-		</div> -->
-		<!-- <div class="metric">
-			<div class="icon">☕</div>
-			<div class="counter" data-target="165">0</div>
-			<div>Cups of Coffee</div>
-		</div> -->
-	</section>
-
-	<section class="container" id="about-section">
-		<div class="about-desc animate__animated animate__fadeIn row">
-			<div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12">
-				<h3 id="about-title" style="color: #718388;">Who am I?</h3>
+		<!-- Introduction -->
+		<h1 class="name">Ahoy, I'm Tejaaswini 👋</h1>
+		<div class="intro-section">
+			<div class="intro-text">
+				<p>
+					I am a masters student in Computer Science at The George Washington University.
+					My main area of research is Autonomous Systems and Robotics.
+					I am particularly interested in making these systems more secure and reliable in real time.
+				</p>
 				<br />
-				<h5 id="desc" style="width: fit-content; font-size: 18px; text-align: justify">
-					Hello! I'm Tejaaswini Narendran (finding it difficult to pronounce? no worries, call me TJ)!
-					<br />
-					<br />
-					I'm a Backend Developer with 3 years of professional experience based in Washington DC, US.
-					I have a strong foundation in Python, especially within frameworks like Django and Flask,
-					I've also extensively worked on frontend technologies like JavaScript, React, and Svelte.
-					<br />
-					<br />
-					I'm currently pursuing Masters in Computer Science at
-					The George Washington University - School of Engineering and Applied Science.
-					<br />
-					<br />
-					I am passionate about cryptography and privacy protection, particularly Zero-Knowledge Proofs (ZKPs)
-					and have worked as a Blockchain researcher concentrating on elliptical curves and anomalies in smart
-					contracts.
-					<br />
-					<br />
-					When I'm not coding, you can find me reading books, playing the ukele, watching F1,
-					driving RC cars or exploring the city.
-				</h5>
-				</h5>
+				<p>
+					I have also been a blockchain reseacher working on identity management and
+					smart contract security. As part of my research, I started on an open source blockchain project called
+					LaborLedger (2025) which aims at providing a secure payment system for blue collar workers.
+				</p>
 				<br />
-				<a href="https://drive.google.com/file/d/1K4UJn-9M7_2JpmmfXg09aoXha35jsfKf/view?usp=sharing"
-					target="_blank" id="resume" style="text-transform: none;">Resume
-				</a>
-			</div>
-			<div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 image">
-				<img src="/images/tj.jpg" alt="Tejaaswini-Narendran" />
-			</div>
-		</div>
-	</section>
-
-	<section class="container" id="research-section">
-		<div class="about-desc animate__animated animate__fadeIn row">
-			<div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12">
-				<h3 id="about-title" style="color: #718388;">Research and Publications</h3>
+				<p>
+					During my undergrad I co-authored a book along with a friend on <a
+						href="https://www.shroffpublishers.com/books/9789352138852/" target="_blank"
+						style="text-decoration: none;">"Blockchain for Beginners"</a>
+					which is available on Shroff Publications.
+				</p>
 				<br />
-				<h5 id="desc" style="width: fit-content; font-size: 18px; text-align: justify">
-					I'm currenytly working as a research asssitant with Prof Sibin Mohan, where I'm working on
-					building autonomous drones and rovers.
-					<br />
-					<br />
-					My research concentrates on implementing secure communication protocols between the drones.
-					<br />
-					<br />
-					I enjoy hardware and playing around with jetsons and raspberry pi's!
-				</h5>
-				</h5>
-				<br />
-				<!-- <a href="https://drive.google.com/file/d/1Dsv7IyTNEPAl35n483Uv6Dinvl1I0bwH/view?usp=sharing"
-					target="_blank" id="resume" style="text-transform: none;">Resume
-				</a> -->
-			</div>
-			<div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 image">
-				<img src="/images/drone.jpeg" alt="drone" />
 			</div>
 
-			<br />
-			<br />
-
-		</div>
-
-		<br />
-		<br />
-
-		<div class="about-desc animate__animated animate__fadeIn row">
-			<div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12">
-				<br />
-				<h5 id="desc" style="width: fit-content; font-size: 18px; text-align: justify">
-					I'm passionate about cryptography and privacy protection, particularly Zero-Knowledge Proofs (ZKPs)
-					and have worked as a
-					Blockchain researcher concentrating on elliptical curves and anomalies in smart contracts.
-					<br />
-					<br />
-					Collating all my research work, I've co-authored a book titled "Blockchain for Beginners: Art of
-					Decentralization and Cryptography" which lays the foundation
-					for most of the web3 concepts that one would require to get started.
-					<br />
-					<br />
-					I've also given a few talks on the same topic at various conferences and meetups.
-				</h5>
-				</h5>
-				<br />
-				<a href="https://www.shroffpublishers.com/books/9789352138852/"
-					target="_blank" id="resume" style="text-transform: none;">Book
-				</a>
-			</div>
-			<div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 image">
-				<img src="/images/book.png" alt="blockchain for beginners" />
-			</div>
-
-
-			<br />
-			<br />
-
-		</div>
-	</section>
-
-	<section class="container work" id="work-section">
-		<h2 class="numbered-heading" style="color:#718388">Where I’ve Worked?</h2>
-		<div class="row">
-			<div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
-				<div class="d-flex align-items-start inner">
-					<div class="nav flex-column nav-pills me-3 dyvvTf" id="v-pills-tab" role="tablist"
-						aria-orientation="horizontal">
-						<button class="nav-link active" id="gale-tab" data-bs-toggle="pill"
-							data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
-							aria-selected="true">
-							GALE Partners
-						</button>
-						<button class="nav-link" id="normalyze-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home"
-							type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
-							KalaKumbh
-						</button>
-						<button class="nav-link" id="gwu-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile"
-							type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
-							Follo Partners
-						</button>
-						<button class="nav-link" id="adcuratio-tab" data-bs-toggle="pill"
-							data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
-							aria-selected="false">
-							Tezos India
-						</button>
-						<button class="nav-link" id="freelancer-tab" data-bs-toggle="pill"
-							data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
-							aria-selected="false">
-							Codemonk
-						</button>
-					</div>
-				</div>
-			</div>
-			<div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-xs-12">
-				<div class="tab-content ckndNo" id="v-pills-tabContent">
-					<div class="tab-pane fade show active hSMFmU tab-content-transition" id="gale" role="tabpanel"
-						aria-labelledby="gale-tab">
-						<h3>
-							<span>Full Stack Engineer</span><span class="company">&nbsp;@&nbsp;<a
-									href="https://www.gale.agency/" class="inline-link" rel="noopener noreferrer"
-									target="_blank">GALE Partners</a></span>
-						</h3>
-						<p class="range">Jan 2022 - Jan 2024</p>
-						<div>
-							<ul>
-								<li>
-									Developed secure APIs facilitating financial transactions for a prominent US-based
-									bank, leveraging encryption protocols and
-									achieving a 30% increase in transaction throughput, ensuring robust security and
-									scalability.
-								</li>
-								<li>
-									Led a 3-member team in redesigning and developing an existing financial application,
-									resulting in a 20% reduction in page
-									response time.
-								</li>
-								<li>
-									Optimized database queries, reducing system load time from 5 seconds to less than 1
-									second, enhancing performance.
-								</li>
-								<li>
-									Designed and implemented a tailored notification system to promptly dispatch custom
-									emails alerting system failures.
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="tab-pane fade hSMFmU tab-content-transition" id="normalyze" role="tabpanel"
-						aria-labelledby="normalyze-tab">
-						<h3>
-							<span>Co Founder / CTO</span><span class="company">&nbsp;@&nbsp;<a
-									href="https://normalyze.ai/" class="inline-link" rel="noopener noreferrer"
-									target="_blank">KalaKumbh</a></span>
-						</h3>
-						<p class="range">Jan 2023 - April 2024</p>
-						<div>
-							<ul>
-								<li>
-									Lead the engineering team, fostering collaboration between design, product
-									management, and business development teams.
-								</li>
-								<li>
-									Drove key decisions spanning technology stack, architectural design, business
-									choices, and partnerships, ensuring a successful project outcome.
-								</li>
-								<li>
-									Architected the platform for scalability, selecting appropriate technologies and
-									ensuring robust security measures for user data and privacy.
-								</li>
-								<li>
-									Within the first month of the MVP launch, we onboarded approximately 800 users,
-									setting a strong foundation for continued growth
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="tab-pane fade hSMFmU tab-content-transition" id="gwu" role="tabpanel"
-						aria-labelledby="gwu-tab">
-						<h3>
-							<span>Platform Engineer / Founding Enginner</span><span class="company">&nbsp;@&nbsp;<a
-									href="https://www.folloplatforms.com/" class="inline-link" rel="noopener noreferrer"
-									target="_blank">Follo Platforms</a></span>
-						</h3>
-						<p class="range">Jan 2021 - Jan 2022</p>
-						<div>
-							<ul>
-								<li>
-									Developed Dr. Follo, an encrypted chat app for doctors and patients with a ledger
-									platform for secure data storage and
-									role-based access controls, reducing message delivery latency by 40% and enhancing
-									security with multi-factor authentication.
-								</li>
-								<li>
-									Engineered a monitoring system to automate timely messaging in the doctor’s absence,
-									increasing patient engagement by
-									more than 40% and ensuring continuity of care.
-								</li>
-								<li>
-									Worked with doctors to integrate a decision-tree-based diagnostic framework into the
-									chat app, enhancing patient care by
-									~50% through tailored symptom assessment and streamlined data collection.
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="tab-pane fade hSMFmU tab-content-transition" id="adcuratio" role="tabpanel"
-						aria-labelledby="adcuratio-tab">
-						<h3>
-							<span>Frontend Developer Intern</span><span class="company">&nbsp;@&nbsp;<a
-									href="https://tezosindia.org.in/" class="inline-link" rel="noopener noreferrer"
-									target="_blank">Tezos India Foundation</a></span>
-						</h3>
-						<p class="range">Nov 2020 - Jan 2021</p>
-						<div>
-							<ul>
-								<li>
-									Took ownership of architecting and maintaining the official Tezos India website,
-									ensuring a modular front-end structure, and
-									deploying AWS Lambda for enhanced accessibility and performance.
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="tab-pane fade hSMFmU tab-content-transition" id="freelancer" role="tabpanel"
-						aria-labelledby="freelancer-tab">
-						<h3>
-							<span>Frontend Developer Intern</span><span class="company">&nbsp;@&nbsp;<a
-									href="https://codemonk.io/" class="inline-link" rel="noopener noreferrer"
-									target="_blank">Codemonk</a></span>
-						</h3>
-						<p class="range">April 2020 - Sept 2020</p>
-						<div>
-							<ul>
-								<li>
-									Led the development of the webpage for a healthcare startup client, using React to
-									construct modular, responsive UI
-									components that resulted in more than 45% boost in user engagement.
-								</li>
-								<li>
-									Optimized rendering using React’s lifecycle methods, resulting in a 25% reduction in
-									loading times, and created organized
-									Redux stores to ensure consistent data flow and business logic integration.
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
+			<div class="intro-image">
+				<img src="./images/tj.jpg" alt="Profile Picture" />
 			</div>
 		</div>
-	</section>
 
-	<section class="container work" id="work-section" style="margin-top: -30vh;">
-		<h2 class="numbered-heading" style="color:#718388;">What I Worked With</h2>
-		<div class="row">
-			<div class="col-sm-12 col-md-12 col-lg-6 wow">
-				<div class="service-item">
-					<div class="service-icon">
-						<svg xmlns="http://www.w3.org/2000/svg" height="3em" width="3em" fill="#718388"
-							viewBox="0 0 640 512">
-							<path
-								d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z" />
-						</svg>
-						<i class="bi bi-code"></i>
-					</div>
-					<div class="service-text">
-						<h3 style="color:#718388;">Backend Frameworks and Databases</h3>
-						<p>Python, Django, Go, Flask, PostgresQL, MonogDB, Redis, protobuf, RabbitMQ, CMS, ETL</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-12 col-md-12 col-lg-6 wow">
-				<div class="service-item">
-					<div class="service-icon">
-						<svg xmlns="http://www.w3.org/2000/svg" height="3em" width="3em" fill="#718388"
-							viewBox="0 0 640 512">
-							<path
-								d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z" />
-						</svg>
-					</div>
-					<div class="service-text">
-						<h3 style="color:#718388;">Frontend and Design</h3>
-						<p>ReactJS, JavaScript, Tailwind, Sveltekit, Figma</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<br class="break" />
-		<div class="row">
-			<div class="col-sm-12 col-md-12 col-lg-6 wow fadeInUp" data-wow-delay="0.4s"
-				style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp">
-				<div class="service-item">
-					<div class="service-icon">
-						<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="#718388"
-							class="bi bi-code-square" viewBox="0 0 16 16">
-							<path
-								d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
-							<path
-								d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z" />
-						</svg>
-					</div>
-					<div class="service-text">
-						<h3 style="color:#718388;">Cloud Services and Infrastructures</h3>
-						<p>AWS, Docker</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-12 col-md-12 col-lg-6 wow">
-				<div class="service-item">
-					<div class="service-icon">
-						<svg xmlns="http://www.w3.org/2000/svg" height="3em" width="3em" fill="#718388"
-							viewBox="0 0 576 512">
-							<path
-								d="M9.4 86.6C-3.1 74.1-3.1 53.9 9.4 41.4s32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L178.7 256 9.4 86.6zM256 416H544c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32s14.3-32 32-32z" />
-						</svg>
-					</div>
-					<div class="service-text">
-						<h3 style="color:#718388;">Version Control and Collaboration</h3>
-						<p>Git</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-	<section class="container" id="projects" style="margin-top: -25vh;">
-		<h2 class="numbered-heading" data-sr-id="3" style="
-					visibility: visible;
-					opacity: 1;
-					transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-					transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
-						transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
-					color:#718388;
-				">
-			Some Things I’ve Built
-		</h2>
-		<ul class="projects-list">
-			<li class="featured__StyledProject-sc-ywnbqt-1 dIcCVR" data-sr-id="5" style="
-						visibility: visible;
-						opacity: 1;
-						transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-						transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s,
-							transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
-					">
-				<div class="project-content">
-					<div>
-						<h3 class="project-title"><a href="https://github.com/Tejaaswini/system-monitoring">sysmon</a>
-						</h3>
-						<div class="project-description">
-							<p>
-								sysmon is a system monitoring tool built using Go for the backend and D3.js for the
-								frontend visualization. It provides real-time monitoring of various system metrics such
-								as CPU usage, memory usage, disk usage, and network usage.
-							</p>
-						</div>
-						<ul class="project-tech-list">
-							<li>go</li>
-							<li>d3js</li>
-							<li>RESTAPI</li>
-						</ul>
-						<div class="project-links">
-							<a href="https://github.com/Tejaaswini/system-monitoring" aria-label="GitHub Link"
-								rel="noopener noreferrer" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
-									role="img" viewBox="0 0 24 24" fill="black" stroke="black" stroke-width="2"
-									stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
-									<title>GitHub</title>
-									<path
-										d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-									</path>
-								</svg>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="project-image">
-					<a href="https://github.com/Tejaaswini/system-monitoring" target="_blank">
-						<div data-gatsby-image-wrapper=""
-							class="gatsby-image-wrapper gatsby-image-wrapper-constrained img">
-							<div style="max-width: 700px; display: block">
-								<img alt="" role="presentation" aria-hidden="true"
-									src="data:image/svg+xml;charset=utf-8,%3Csvg height='408' width='700' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
-									style="max-width: 100%; display: block; position: static" />
-							</div>
-							<img aria-hidden="true" data-placeholder-image="" decoding="async"
-								src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAC0klEQVQoz03Q22scZRjH8fkfshUq7AoN2c3OzO5mZvYw58Puzh6yazZWY7FCtQge8ABS3NIoseTQJA019QhatFCpNl5Ya7UXEWrSmCAtRhD1RkG98Nj2b/jKTtbGiw/P877w/njeRzj3+128/39/7Imc/3MPF27F+PBmjAs3Y6zcju2c/4mxcmuAldsDnP9rgA96/t4lvPNTgv+c+TkeefeXOK/cSDC9eg9LWwkWNxLMXU2wtBXn1e141C9+Fee9X+/m7B17OfvbXoTl7WFOf9u3nWL5mxSnt5Ocup7ixHqKxc1kZH4jycmtJKduDHFifYiFjSFe/24w8sb3g7z5wz7e+nEfwsyaxuy6xtyGxvSXKi+vqhz/QmVmTWHumsL0VYXZtRHmruWYXetbzzK/mY1qz8JmhqXrGU5+nUHoXvI5esmje9HjhY971e1z6F60OfqJzbFPXY5ddpjs+czecdnixc97zMhLVwymVnWEp861efJMm/sPdah3WjQ6TcJ2nXKzSthuUBsbpdoKqbZq0V3QKFNuVvBqAX49wG8EuGHAvQcqPP9RiPDwawd5aOkAjU6H0dFx/HKI41UoFE1sr4ob1DEtD8N0yRd0FCVPLqcgiXJEljKkUxIFq8Bjb+9HGJt5gtbkYepjbWqNJpbrYns++aKOblqYlo1pO6haHkkSkWUZSZYQRTHSu0unhlENjYnFRxCCI0fwn3sWI2xSbY2jWQGK4VHUTVyvjBdU8MtVXL+Clt8NvSOTQRJFVKNEY/JphOLjUxQOd3FqLRrtcawgRHcCtEIR3bAwLIeSbqAoKrmRETK9AEnaJcuI6TQjxRL2M10E6eAC8oNTlEfH2f/ABOWwhu36UaDjBXjlKpbjRX2vKqrW/27/25KEOJwim9dRHz2OMHjfMsnOPGZQj3Zn9x5GgSVKurkzoWFGQdlsDkmS+7vbnVJMDyMrJdITC/wLtbHssInFFosAAAAASUVORK5CYII="
-								alt="" style="opacity: 0; transition: opacity 500ms linear 0s; object-fit: cover" />
-							<picture>
-								<img width="500" height="408" data-main-image="" sizes="(min-width: 700px) 700px, 100vw"
-									decoding="async" src="/images/cpu-usage.png" srcset="
-											/images/cpu-usage.png  175w,
-											/images/cpu-usage.png  350w,
-											/images/cpu-usage.png  700w,
-											/images/cpu-usage.png 1400w
-										" alt="sysmon" style="object-fit: cover; opacity: 1" />
-							</picture><noscript></noscript>
-						</div>
-					</a>
-				</div>
-			</li>
-			<li class="dIcCVR" data-sr-id="4" style="
-						visibility: visible;
-						opacity: 1;
-						transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-						transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
-							transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-					">
-				<div class="project-content">
-					<div>
-						<h3 class="project-title"><a href="https://rubix.bunsamosa.org/">rubix</a></h3>
-						<div class="project-description">
-							<p>
-								A city exploration game featuring immersive in-platform streaming services and where
-								users can navigate virtual cities, participate in events, and connect with new people,
-								fostering a vibrant online community experience.
-							</p>
-						</div>
-						<ul class="project-tech-list">
-							<li>Three.js</li>
-							<li>IPFS</li>
-							<li>TypeScript</li>
-						</ul>
-						<div class="project-links">
-							<a href="https://rubix.bunsamosa.org/" aria-label="External Link" class="external"><svg
-									xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
-									stroke="currentColor" stroke-width="2" stroke-linecap="round"
-									stroke-linejoin="round" class="feather feather-external-link">
-									<title>External Link</title>
-									<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-									<polyline points="15 3 21 3 21 9"></polyline>
-									<line x1="10" y1="14" x2="21" y2="3"></line>
-								</svg></a>
-						</div>
-					</div>
-				</div>
-				<div class="project-image">
-					<a href="https://rubix.bunsamosa.org/">
-						<div data-gatsby-image-wrapper=""
-							class="gatsby-image-wrapper gatsby-image-wrapper-constrained img">
-							<div style="max-width: 700px; display: block">
-								<img alt="" role="presentation" aria-hidden="true"
-									src="data:image/svg+xml;charset=utf-8,%3Csvg height='408' width='700' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
-									style="max-width: 100%; display: block; position: static" />
-							</div>
-							<img aria-hidden="true" data-placeholder-image="" decoding="async"
-								src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAbUAAAG1AHhwwEOAAACZklEQVQoz12O7U7TYBiGexLiNlm7te82pB8WWLshA4mJJ8BkhZiQaCSkJv70p4dhiME4lUhk7bq1W7u1+2DOrR0DSlkgJBJJMEElbkY9AhMQErhz5f5xJ1eeBxLam0J76xIbdmZ7R9y0JduRbCfrdCTbSW1sXbD6HxvSzUbRbOhmUzebRbNhrFuCYbzJymK5vCRI71Vt8YO4nFOL65ZmmVrL1CxTPQdq14x2zbCqulUttqq6taZ/KqkVVa6XVCOfqWhKUclUCkqzZjTX9Maa3qwZZr1k1stmvQwd6PKBLncUwZFTu2rakVM7OWFXkxxF2CtIO3mxk093tPR2TnDyoq2kOpq0X5L3S8p+SYFOcumumukVsj0t29Wy3cJZny5FuVuUTzv784JC5qSQOc6Lx3kR+r6y+nzh4ePp+zzH8VyC5xJPZrkFjuNnZp4+mOW56fn41Hx8iucSC9NxfibxKD71bG6umxZ+Z9PQUTI9yrAETePULS/iw3FqcGgYp2kQCHq9Xk+/x33Dc83l6nO7+1zu626Pq79/GCd7K/LfVB76sqTfG5+8PRYLhxkMxQZJihhhqTBDkCRAURhGrgQD2PgIc7Jc+bXyEdp7ad6N3WEjEZoeQlGUJnCaJIKhAT8IwjACXw4Cwz7gj4XZo+TGt2Ubai3uTo5NsBEmGhnFMEANBIgQCKA+zI8A1Idc1hEEcXlcYYrdS37+/O4Qqi4ejo9OMEyYZaMAgBDAbgZBEEPPnrx6GUHcHtcIFWm9/rH5tgtVXnyNRSfp4SGCpAAA5EAgQuF4CADUj6H+K/65HG2+6q0n//wD0tpQBK/qWp8AAAAASUVORK5CYII="
-								alt="" style="opacity: 0; transition: opacity 500ms linear 0s; object-fit: cover" />
-							<picture>
-								<img width="700" height="408" data-main-image="" sizes="(min-width: 700px) 700px, 100vw"
-									decoding="async" src="/images/rubix.png" srcset="
-											/images/rubix.png  175w,
-											/images/rubix.png  350w,
-											/images/rubix.png  700w,
-											/images/rubix.png 1400w
-										" alt="rubix" style="object-fit: cover; opacity: 1" />
-							</picture><noscript></noscript>
-						</div>
-					</a>
-				</div>
-			</li>
-			<li class="featured__StyledProject-sc-ywnbqt-1 dIcCVR" data-sr-id="6" style="
-						visibility: visible;
-						opacity: 1;
-						transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-						transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
-							transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
-					">
-				<div class="project-content">
-					<div>
-						<h3 class="project-title"><a href="#">SubScape</a></h3>
-						<div class="project-description">
-							<p>
-								A chrome extension that allows users to manage their subscriptions and track their
-								monthly payments and expenses. The extension also provides insights into the user's
-								spending habits and offers suggestions for optimizing their subscriptions.
-							</p>
-						</div>
-						<ul class="project-tech-list">
-							<li>HTML</li>
-							<li>JavaScript</li>
-							<li>Go</li>
-							<li>AWS</li>
-						</ul>
-						<div class="project-links">
-							<a href="https://github.com/Tejaaswini/subscape/tree/master" aria-label="GitHub Link"
-								rel="noopener noreferrer" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
-									role="img" viewBox="0 0 24 24" fill="black" stroke="black" stroke-width="2"
-									stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
-									<title>GitHub</title>
-									<path
-										d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-									</path>
-								</svg>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="project-image">
-					<a href="https://github.com/Tejaaswini/subscape/tree/master">
-						<div data-gatsby-image-wrapper=""
-							class="gatsby-image-wrapper gatsby-image-wrapper-constrained img">
-							<div style="max-width: 700px; display: block">
-								<img alt="" role="presentation" aria-hidden="true"
-									src="data:image/svg+xml;charset=utf-8,%3Csvg height='408' width='700' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
-									style="max-width: 100%; display: block; position: static" />
-							</div>
-							<img aria-hidden="true" data-placeholder-image="" decoding="async"
-								src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAACPklEQVQoz32QS08TURiGz0wV/oFgjCD+XRITTdy4MC7caEyMC0nEBS4AF3ilGJWL7UxLC2Xamelcz20e02lBiMaTvDnfe873PucihIarqqaCv2X/4ev+SzkhK65IgSgs7tefOL+OcT9/x/12hNM9w2n1cA46OPs+7u4+YlxOYZfzIrU4qcVNDe5kTjRurGh0RzT8gEZ7QKMT4A4S3NOkrhu9qN5zRwVuMsvNOMIJFBOJQCOGGtFLEe0Q0c+m9UT9HNFN/tS9DHGSI7xZ33CadYYK4XgZ11pjbrdG3PViVvyYZS9mqR1xx4svtNyerp/7yf7SrF7xYm55Ma6fIcRuwI0djy/tLr7fwwsignFCmqVEeUlUlPWcqpJESsJ86kdpSpgm+IMzTk/6NMc515sBQmx2uLm+x/P3Ca+3Cl5tlXQCQzOsMNqipUZJxWFrzHBYQlXVfhRrvL7BaAOlZD8qmN8+Roi1AxZefuRwEJFlklIazjLD25MKZSxZXlCUJZ/2Rvi9BKUkSZLQCxTNlkYZjcoLmoOY+TdHCPGsycLTbbwgBKOpqFDKgJZIpdHGkhcSqCilYpzmpFmBtRZjNHGSo4uSH8OMuRd7CPF4h4VHG/jDqH6OsRVSmTqsjaGaPFGpC/j5mKxLZbFVVfvDMGfuyQeEeLDJ4v11/GAKtLPGopQobbC2Ii9KSqkxM+AEVh+kbX2BGjjKmHu4hRCrGyyuruGfhVitJ0yyXBLGKWGUkBUSrW39t/p/wGHG/L13/AZQ3CLmm+gf1wAAAABJRU5ErkJggg=="
-								alt="" style="opacity: 0; transition: opacity 500ms linear 0s; object-fit: cover" />
-							<picture>
-								<img width="700" height="408" data-main-image="" sizes="(min-width: 700px) 700px, 100vw"
-									decoding="async" src="/images/subscape.png" srcset="
-											/images/subscape.png  175w,
-											/images/subscape.png  350w,
-											/images/subscape.png  700w,
-											/images/subscape.png 1400w
-										" alt="Accounty Agency System" style="object-fit: cover; opacity: 1" />
-							</picture><noscript></noscript>
-						</div>
-					</a>
-				</div>
-			</li>
+		<!-- Research Interests -->
+		<p>Topics of interest include:</p>
+		<ul>
+			<li>Real-time & Autonomous Systems</li>
+			<li>Embedded system security</li>
+			<li>Homomorphic Encryptions</li>
+			<li>Zero Knowledge Proofs</li>
+			<li>Scalable Distributed Systems</li>
 		</ul>
-		<br />
-		<div class="projects-btn text-center">
-			<a class="contact-det" href="https://github.com/Tejaaswini"><button class="contact-btn text-center">
-					More Projects
-					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-						class="bi bi-box-arrow-up-right" viewBox="0 0 25 25">
-						<path fill-rule="evenodd"
-							d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
-						<path fill-rule="evenodd"
-							d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
-					</svg></button></a>
-		</div>
-	</section>
 
-	<section class="container" id="icebreaker-section" style="margin-top: 10%; margin-bottom: 8%;">
-		<div class="about-desc animate__animated animate__fadeIn row">
-			<div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12">
-				<h3 id="about-title" style="color: #718388;">Want to have a conversation? Here are a few topics I'm
-					interested in</h3>
-				<br />
-				<h5 id="desc" style="width: fit-content; font-size: 18px; text-align: justify">
-					<ul>
-						<li>I like digital art and sketching. I usually sketch on a wacom connected to my mac and use <a
-								href="https://www.sketchbook.com/blog/sketchbook-pro-on-macos" target="_blank"
-								style="color: black;">Sketchbook.</a> - <a href="https://www.instagram.com/messy_dodo/"
-								target="_blank" style="color: black;">View My Artwork</a>
-						</li>
-						<br />
-						<li>I enjoy wacthing F1. I support Ferrari (#forzaferrari) and I'm a huge fan of Vettel and
-							Kimi. On
-							non-race days I play F1 (currently playing F1 2022)
-						</li>
-						<br />
-						<li>I recently bought a RC car and I'm learning to drive it. I'm also learning to build one from
-							scratch.
-						</li>
-						<br />
-						<li>I like to go on treks and hikes. Recently I went to <a
-								href="https://www.visitwhitemountains.com/things-to-do/outdoors/hiking-trails/"
-								style="color:black">The White Mountains in New hampshire. It is one of the highest peaks
-								in New England and home to the most rugged and challenging terrain. I tend to click a
-								lot of pictures during these hikes!
-						</li>
-						<br />
-						<br />
-						<li>I'm building an extension to for leetcode spaced repetition. Check out the repo here - <a
-								href="https://github.com/Tejaaswini/leetcode-spaced-repetition"
-								style="color:black">Leetcode Spaced Repetition</a>
-						</li>
-						<br />
-						<li>I also read a when I find time. I'm currently reading <a
-								href="https://www.goodreads.com/book/show/30363785-the-art-of-invisibility"
-								style="color:black">The Art of Invisibility</a> by Kevin Mitnick. It provides essential
-							strategies for securing personal privacy online, using real-life examples to demonstrate how
-							to protect against hackers and maintain digital anonymity.
-							I recently finished reading Tokyo Ghoul v1 by Sui Ishida.
-							It's a dark fantasy manga series about a college student
-							named Ken Kaneki who barely survives a deadly encounter
-							with a ghoul and becomes a half-ghoul himself.
-							He must learn to live in both worlds.
-						</li>
-						<br />
-						<li>Occasionally I also write poems. Here is one of my favorite one titled <a
-								href="https://youtu.be/o7WHkaASLIQ" style="color:black">"Storyteller"</a>
-							It's a poem about how you wish to be loved.
-					</ul>
-				</h5>
-				</h5>
-				<br />
-			</div>
-			<div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 image">
-				<img src="/images/ice-breaker.jpeg" alt="Blockchain for Beginners" style="width: 83%;" />
-			</div>
-		</div>
-	</section>
+		<!-- Bottom "Button" Links with Icons -->
+		<div class="contact-links">
+			<!-- Email -->
+			<a href="mailto:tejnaren07@gmail.com" class="btn btn-light">
+				<i class="fa-solid fa-envelope"></i> tejnaren07
+			</a>
+			<!-- GitHub -->
+			<a href="https://github.com/Tejaaswini" class="btn btn-dark" target="_blank">
+				<i class="fab fa-github"></i> Tejaaswini/me
+			</a>
+			<!-- Twitter -->
+			<a href="https://twitter.com/tejnaren07" class="btn btn-twitter" target="_blank">
+				<i class="fa-brands fa-twitter"></i> @tejnaren07
+			</a>
+			<!-- LinkedIn -->
+			<a href="https://linkedin.com/in/tejaaswini" class="btn btn-white">
+				<i class="fa-brands fa-linkedin"></i> in/tejaaswini
+			</a>
 
-	<section class="container text-center contact-form">
-		Available for select freelance opportunities - Have an exciting project you need help with?
-		Send me an email or contact me via instant message!
-		<h2 class="text-center" style="margin: 1em auto; color:#718388">Let's Connect!</h2>
-		<br />
-		<br />
-		<a class="contact-det" href="mailto:tejnaren07@gmail.com"><button class="contact-btn text-center">Email
-				Me</button></a>
-		<p class="lead" style="margin: 1.5em auto">I'll get back soon!</p>
-		<p>
-			<a href="https://github.com/tejaaswini" type="button" class="btn-floating btn-git ci" target="__blank">
-				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-github"
-					viewBox="0 0 16 16">
-					<path
-						d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-				</svg></a>
-			<a href="https://www.linkedin.com/in/tejaaswini" type="button" class="btn-floating btn-li ci"
-				target="__blank">
-				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-linkedin"
-					viewBox="0 0 16 16">
-					<path
-						d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-				</svg></a>
-			<a href="https://medium.com/@tejnaren07" type="button" class="btn-floating btn-tw ci" target="__blank">
-				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-medium"
-					viewBox="0 0 16 16">
-					<path
-						d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8zm4.95 0c0 2.34-1.01 4.236-2.256 4.236-1.246 0-2.256-1.897-2.256-4.236 0-2.34 1.01-4.236 2.256-4.236 1.246 0 2.256 1.897 2.256 4.236zM16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795z" />
-				</svg></a>
-			<br />
-		</p>
-	</section>
 
-	<footer>
-		<div class="footer-copyright text-center py-3">
-			© <span id="currentYear"></span> Copyright:
-			<a href="https://tejaaswini.com" style="color: #718388">Tejaaswini Narendran</a>
 		</div>
-	</footer>
-	<script src="/script.js"></script>
-	<script>
-		const currentYear = new Date().getFullYear();
-		document.getElementById("currentYear").textContent = currentYear;
-	</script>
-	<!-- <script src="/bootstrap/js/bootstrap.min.js"></script> -->
-</body>
+	</div>
+
 </body>
 
 </html>
