@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What do you want to know? - Tejaaswini</title>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --brand: #e50914;
+            --bg: #000000;
+            --text: #ffffff;
+            --muted: #b3b3b3;
+            --radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .profile-content {
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .profile-content h2 {
+            font-size: 3.5rem;
+            font-weight: 400;
+            margin-bottom: 3rem;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        .profile-grid {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .profile-item {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .profile-item:hover {
+            transform: scale(1.1);
+        }
+
+             .profile-avatar {
+       width: 150px;
+       height: 150px;
+       border-radius: 10px;
+       margin-bottom: 1.2rem;
+       background-size: cover;
+       background-position: center;
+       background-repeat: no-repeat;
+     }
+
+        .profile-item span {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #b3b3b3;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            background: none;
+            border: 2px solid var(--text);
+            color: var(--text);
+            padding: 0.8rem 1.5rem;
+            border-radius: var(--radius);
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .back-button:hover {
+            background: var(--text);
+            color: var(--bg);
+        }
+
+        /* Mobile Responsiveness */
+                 @media (max-width: 768px) {
+           .profile-content h2 {
+             font-size: 2.5rem;
+             margin-bottom: 2rem;
+           }
+
+           .profile-grid {
+             gap: 1.5rem;
+           }
+
+           .profile-avatar {
+             width: 120px;
+             height: 120px;
+           }
+
+           .back-button {
+             top: 1rem;
+             left: 1rem;
+             padding: 0.6rem 1.2rem;
+             font-size: 0.9rem;
+           }
+         }
+
+         @media (max-width: 480px) {
+           .profile-content h2 {
+             font-size: 2rem;
+           }
+
+           .profile-grid {
+             gap: 1rem;
+           }
+
+           .profile-avatar {
+             width: 120px;
+             height: 120px;
+           }
+         }
+    </style>
+</head>
+<body>
+    <a href="netflix-portfolio.html" class="back-button">← Back</a>
+    
+    <div class="profile-content">
+        <h2>What do you want to know?</h2>
+                 <div class="profile-grid">
+             <div class="profile-item" onclick="selectProfile('research')">
+                 <div class="profile-avatar" style="background-image: url('https://sumanthsamala.com/static/media/blue.9b293a4a6ef065903a8f.png')"></div>
+                 <span>Research</span>
+             </div>
+             <div class="profile-item" onclick="selectProfile('jobexperience')">
+                 <div class="profile-avatar" style="background-image: url('https://sumanthsamala.com/static/media/grey.bbfd7fb8e095529e355c.png')"></div>
+                 <span>Job Experience</span>
+             </div>
+             <div class="profile-item" onclick="selectProfile('projects')">
+                 <div class="profile-avatar" style="background-image: url('https://sumanthsamala.com/static/media/red.6138d0c52611186c9d03.png')"></div>
+                 <span>Projects</span>
+             </div>
+             <div class="profile-item" onclick="selectProfile('icebreaker')">
+                 <div class="profile-avatar" style="background-image: url('https://sumanthsamala.com/static/media/yellow.2631c5cf63f02f6bbfbf.png')"></div>
+                 <span>Icebreaker</span>
+             </div>
+         </div>
+    </div>
+
+    <script>
+             function selectProfile(profile) {
+       // Handle profile selection
+       const messages = {
+         research: 'Welcome! Let me show you my research work in autonomous systems and blockchain.',
+         jobexperience: 'Hey there! Check out my professional experience and career journey.',
+         projects: 'Hello! Here are my technical projects and development work.',
+         icebreaker: 'Adventure awaits! Let\'s talk about my interests and hobbies.'
+       };
+       
+       alert(messages[profile]);
+       
+       // Navigate to index.html after profile selection
+       setTimeout(() => {
+         window.location.href = 'index.html';
+       }, 1000);
+     }
+    </script>
+</body>
+</html>

@@ -114,6 +114,33 @@
 			font-size: 3rem;
 			color: rgb(0, 0, 0);
 		}
+
+		/* Mobile-friendly video styles */
+		video {
+			max-width: 100%;
+			height: auto;
+			display: block;
+			margin: 0 auto;
+		}
+
+		/* Responsive video container */
+		.image video {
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+		}
+
+		/* Mobile-specific adjustments */
+		@media (max-width: 768px) {
+			.image video {
+				max-width: 100%;
+				margin: 10px 0;
+			}
+			
+			.col-xl-5.image {
+				margin-top: 20px;
+			}
+		}
 	</style>
 </head>
 
@@ -626,8 +653,9 @@
 			</a>
 			<br />
 			<br />
-			<video width="40%" controls>
-				<source src="/short-demo.mov" type="video/mp4">
+			<video style="width: 100%; max-width: 400px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" controls preload="metadata">
+				<source src="/short-demo.mov" type="video/quicktime">
+				<source src="/short-demo.mp4" type="video/mp4">
 				Your browser does not support the video tag.
 			</video>
 		  </div>
@@ -767,8 +795,9 @@
 				<br />
 			</div>
 			<div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 image">
-				<video width="100%" controls>
+				<video style="width: 100%; max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" controls preload="metadata">
 					<source src="/images/short-demo.mp4" type="video/mp4">
+					<source src="/images/short-demo.webm" type="video/webm">
 					Your browser does not support the video tag.
 				</video>
 			</div>
