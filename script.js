@@ -56,3 +56,39 @@ if (nameAudioBtn && nameAudio) {
     });
 }
 
+// Contact Modal functionality
+const contactLink = document.getElementById('contact-link');
+const contactModal = document.getElementById('contact-modal');
+const contactModalClose = document.querySelector('.contact-modal-close');
+
+if (contactLink && contactModal) {
+    contactLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        contactModal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    });
+
+    if (contactModalClose) {
+        contactModalClose.addEventListener('click', () => {
+            contactModal.classList.remove('show');
+            document.body.style.overflow = '';
+        });
+    }
+
+    // Close modal when clicking outside of it
+    contactModal.addEventListener('click', (e) => {
+        if (e.target === contactModal) {
+            contactModal.classList.remove('show');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && contactModal.classList.contains('show')) {
+            contactModal.classList.remove('show');
+            document.body.style.overflow = '';
+        }
+    });
+}
+
