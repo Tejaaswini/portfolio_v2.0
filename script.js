@@ -76,8 +76,6 @@ if (ctaContactLink && contactModal) {
     ctaContactLink.addEventListener('click', openContactModal);
 }
 
-if (contactModal) {
-
 if (contactModalClose) {
     contactModalClose.addEventListener('click', () => {
         contactModal.classList.remove('show');
@@ -102,4 +100,3 @@ document.addEventListener('keydown', (e) => {
         document.body.style.overflow = '';
     }
 });
-
