@@ -602,3 +602,245 @@ body {
         opacity: 1;
     }
 }
+
+/* Experience Section */
+.experience-section {
+    max-width: 900px;
+    margin: 60px auto 100px;
+    padding: 0 24px;
+    text-align: left;
+}
+
+.experience-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.experience-header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.02em;
+}
+
+.experience-subtitle {
+    font-size: 18px;
+    opacity: 0.7;
+    margin: 0;
+    font-weight: 400;
+}
+
+.experience-timeline {
+    position: relative;
+    padding-left: 32px;
+}
+
+.experience-timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--nav-link-color) 0%, transparent 100%);
+    border-radius: 2px;
+}
+
+.experience-card {
+    position: relative;
+    margin-bottom: 48px;
+}
+
+.experience-card:last-child {
+    margin-bottom: 0;
+}
+
+.experience-marker {
+    position: absolute;
+    left: -32px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    background: var(--nav-link-color);
+    border-radius: 50%;
+    border: 3px solid var(--bg-color);
+    box-shadow: 0 0 0 2px var(--nav-link-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover .experience-marker {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 4px var(--nav-link-color), 0 0 20px rgba(196, 85, 47, 0.4);
+}
+
+.experience-content {
+    background: var(--bg-color);
+    border: 1px solid var(--shadow-color);
+    border-radius: 16px;
+    padding: 28px 32px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.experience-card:hover .experience-content {
+    transform: translateX(8px);
+    box-shadow: 0 12px 40px var(--shadow-color);
+    border-color: var(--nav-link-color);
+}
+
+.experience-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.experience-info {
+    flex: 1;
+    min-width: 200px;
+}
+
+.experience-role {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+    color: var(--text-color);
+    letter-spacing: -0.01em;
+}
+
+.experience-company {
+    margin: 0;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.company-name {
+    color: var(--nav-link-color);
+    font-weight: 600;
+}
+
+.company-location {
+    opacity: 0.6;
+}
+
+.company-location::before {
+    content: '•';
+    margin-right: 8px;
+}
+
+.experience-date {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+    opacity: 0.6;
+    white-space: nowrap;
+    padding: 6px 14px;
+    background: var(--shadow-color);
+    border-radius: 20px;
+}
+
+.experience-details {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.experience-details li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.experience-details li:last-child {
+    margin-bottom: 0;
+}
+
+.experience-details li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    background: var(--nav-link-color);
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.experience-details li strong {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.experience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 16px;
+    border-top: 1px solid var(--shadow-color);
+}
+
+.tag {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 12px;
+    background: var(--shadow-color);
+    color: var(--text-color);
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.tag:hover {
+    background: var(--nav-link-color);
+    color: white;
+}
+
+/* Responsive adjustments for experience */
+@media (max-width: 600px) {
+    .experience-section {
+        padding: 0 16px;
+    }
+    
+    .experience-header h1 {
+        font-size: 32px;
+    }
+    
+    .experience-timeline {
+        padding-left: 24px;
+    }
+    
+    .experience-timeline::before {
+        left: 4px;
+    }
+    
+    .experience-marker {
+        left: -24px;
+        width: 10px;
+        height: 10px;
+    }
+    
+    .experience-content {
+        padding: 20px;
+    }
+    
+    .experience-top {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .experience-date {
+        align-self: flex-start;
+    }
+    
+    .experience-role {
+        font-size: 18px;
+    }
+}

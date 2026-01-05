@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experience - TJ</title>
+    <meta name="description"
+        content="Professional experience by Tejaaswini (TJ) - Backend, systems, and robotics software engineering" />
+    <meta name="author" content="Tejaaswini Narendran" />
+    <link rel="icon" type="image/jpeg" href="../profile.jpg" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../script.js" defer></script>
+</head>
+
+<body>
+
+<nav class="nav">
+    <div class="nav-left">Tejaaswini</div>
+    <div class="nav-right">
+        <a href="/">Home</a>
+        <a href="/experience">Experience</a>
+        <a href="https://github.com/tejaaswini" target="_blank">GitHub</a>
+        <a href="/research">Research & Publications</a>
+        <a href="/projects">Projects</a>
+        <a href="/icebreaker">Ice Breaker</a>
+        <a href="#" id="contact-link">Contact</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🛸</button>
+    </div>
+</nav>
+
+<section class="experience-section">
+
+    <div class="experience-timeline">
+        <article class="experience-card">
+            <div class="experience-marker"></div>
+            <div class="experience-content">
+                <div class="experience-top">
+                    <div class="experience-info">
+                        <h3 class="experience-role">Systems Software Engineer</h3>
+                        <p class="experience-company">
+                            <span class="company-name">Mundane</span>
+                            <span class="company-location">Palo Alto, CA</span>
+                        </p>
+                    </div>
+                    <span class="experience-date">Sept 2025 – Dec 2025</span>
+                </div>
+                <ul class="experience-details">
+                    <li>Designed and owned a <strong>performance-critical UDP telemetry and video transport</strong>, instrumenting end-to-end latency, jitter, and packet loss to validate real-time behavior under degraded and adversarial network conditions.</li>
+                    <li>Built a correctness-first, end-to-end <strong>teleoperation pipeline</strong> using raw UDP and stereo cameras, handling packetization, sequencing, buffering, and failure modes while achieving <strong>sub-200 ms tail latency</strong>.</li>
+                    <li>Developed low-level backend services in <strong>C++</strong> that interfaced directly with <strong>ROS-based execution pipelines</strong>, enabling reliable data flow between perception, control, and monitoring systems.</li>
+                    <li>Deployed, operated, and debugged latency-sensitive services on <strong>GCP using Docker</strong>, owning service lifecycle, observability, and production reliability end-to-end.</li>
+                </ul>
+                <div class="experience-tags">
+                    <span class="tag">C++</span>
+                    <span class="tag">UDP</span>
+                    <span class="tag">ROS</span>
+                    <span class="tag">GCP</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">Real-time Systems</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="experience-card">
+            <div class="experience-marker"></div>
+            <div class="experience-content">
+                <div class="experience-top">
+                    <div class="experience-info">
+                        <h3 class="experience-role">R&D Engineer</h3>
+                        <p class="experience-company">
+                            <span class="company-name">George Washington University</span>
+                            <span class="company-location">Washington DC</span>
+                        </p>
+                    </div>
+                    <span class="experience-date">Oct 2024 – Dec 2025</span>
+                </div>
+                <ul class="experience-details">
+                    <li>Architected <strong>real-time, event-driven sensor pipelines</strong> with &lt;200 ms latency using UDP, Intel RealSense, and Vicon, enabling continuous anomaly detection and predictive fault handling.</li>
+                    <li>Integrated <strong>anomaly-detection models into UAV autonomy pipelines</strong>, enabling task-aware recovery and sustained mission execution under degraded sensing conditions.</li>
+                    <li>Developed and modified <strong>PX4 flight-control firmware in C++</strong>, with Python-based unit and integration testing to validate correctness under adversarial scenarios.</li>
+                    <li>Built a <strong>multi-agent simulation framework</strong> leveraging reinforcement learning to learn nominal swarm behavior and detect coordination breakdowns.</li>
+                </ul>
+                <div class="experience-tags">
+                    <span class="tag">C++</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">PX4</span>
+                    <span class="tag">RealSense</span>
+                    <span class="tag">Vicon</span>
+                    <span class="tag">UAV</span>
+                    <span class="tag">RL</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="experience-card">
+            <div class="experience-marker"></div>
+            <div class="experience-content">
+                <div class="experience-top">
+                    <div class="experience-info">
+                        <h3 class="experience-role">Backend Developer</h3>
+                        <p class="experience-company">
+                            <span class="company-name">Gale Partners</span>
+                            <span class="company-location">New York</span>
+                        </p>
+                    </div>
+                    <span class="experience-date">Jan 2022 – Jan 2024</span>
+                </div>
+                <ul class="experience-details">
+                    <li>Designed and scaled <strong>distributed backend services</strong>, reducing p95 latency from ~5s to <strong>&lt;1s</strong> through database indexing, Redis-based caching, and asynchronous execution.</li>
+                    <li>Built <strong>microservices and ETL pipelines</strong> processing millions of transactions per day, improving end-to-end throughput by <strong>~30%</strong> while maintaining correctness under load.</li>
+                    <li>Implemented <strong>secure, compliance-critical API integrations</strong>, supporting thousands of concurrent users with strict correctness and reliability requirements.</li>
+                    <li>Designed and operated <strong>CI/CD pipelines using Jenkins</strong>, enabling automated testing and zero-downtime deployments across multiple environments.</li>
+                    <li>Led code reviews and established testing and design standards, improving system reliability and long-term maintainability.</li>
+                </ul>
+                <div class="experience-tags">
+                    <span class="tag">Distributed Systems</span>
+                    <span class="tag">Redis</span>
+                    <span class="tag">ETL</span>
+                    <span class="tag">Jenkins</span>
+                    <span class="tag">CI/CD</span>
+                    <span class="tag">APIs</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="experience-card">
+            <div class="experience-marker"></div>
+            <div class="experience-content">
+                <div class="experience-top">
+                    <div class="experience-info">
+                        <h3 class="experience-role">Founding Engineer</h3>
+                        <p class="experience-company">
+                            <span class="company-name">Follo Platforms</span>
+                            <span class="company-location">Bengaluru</span>
+                        </p>
+                    </div>
+                    <span class="experience-date">Jan 2020 – Jan 2022</span>
+                </div>
+                <ul class="experience-details">
+                    <li>Designed and operated <strong>event-driven backend systems</strong> using RabbitMQ and Redis Streams, sustaining <strong>tens of thousands of events per second</strong> for real-time healthcare workflows.</li>
+                    <li>Built internal platform APIs and developer-facing tooling with <strong>OpenAPI-specified interfaces</strong>, reducing partner and integration onboarding time by <strong>~30%</strong>.</li>
+                    <li>Managed and scaled <strong>GCP-based production systems</strong> with autoscaling, monitoring, and operational runbooks, maintaining <strong>99.9% uptime</strong> for patient-critical services.</li>
+                    <li>Implemented <strong>end-to-end encryption</strong> and secure data storage, meeting <strong>healthcare compliance and data-protection requirements</strong> with strict correctness guarantees.</li>
+                </ul>
+                <div class="experience-tags">
+                    <span class="tag">RabbitMQ</span>
+                    <span class="tag">Redis Streams</span>
+                    <span class="tag">GCP</span>
+                    <span class="tag">OpenAPI</span>
+                    <span class="tag">Healthcare</span>
+                    <span class="tag">Event-Driven</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- Contact Modal -->
+<div id="contact-modal" class="contact-modal">
+    <div class="contact-modal-content">
+        <span class="contact-modal-close">&times;</span>
+        <h2>Get in Touch</h2>
+        <div class="contact-links">
+            <a href="mailto:tejnaren07@gmail.com" class="contact-link-item">
+                <span class="contact-icon">📧</span>
+                <span class="contact-label">Email</span>
+                <span class="contact-value">tejnaren07@gmail.com</span>
+            </a>
+            <a href="https://x.com/tejnaren07" target="_blank" class="contact-link-item">
+                <span class="contact-icon">🐦</span>
+                <span class="contact-label">X (Twitter)</span>
+                <span class="contact-value">@tejnaren07</span>
+            </a>
+            <a href="https://www.instagram.com/messy_dodo/" target="_blank" class="contact-link-item">
+                <span class="contact-icon">📷</span>
+                <span class="contact-label">Instagram</span>
+                <span class="contact-value">@messy_dodo</span>
+            </a>
+            <a href="https://medium.com/@tejnaren07" target="_blank" class="contact-link-item">
+                <span class="contact-icon">✍️</span>
+                <span class="contact-label">Medium</span>
+                <span class="contact-value">@tejnaren07</span>
+            </a>
+            <a href="https://www.linkedin.com/in/tejaaswini/" target="_blank" class="contact-link-item">
+                <span class="contact-icon">💼</span>
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">tejaaswini</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
