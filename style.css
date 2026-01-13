@@ -31,7 +31,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 20px 60px;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .nav-right {
@@ -62,8 +62,8 @@ body {
 }
 
 .avatar {
-    width: 220px;
-    height: 220px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
     margin-top: 40px;
@@ -72,7 +72,7 @@ body {
 }
 
 .name {
-    font-size: 32px;
+    font-size: 30px;
     margin-top: 20px;
     font-weight: 600;
     display: flex;
@@ -389,6 +389,17 @@ body {
     color: var(--text-color);
     opacity: 0.7;
     margin-top: 10px;
+}
+
+.project-note a {
+    color: var(--nav-link-color);
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.project-note a:hover {
+    text-decoration: underline;
 }
 
 .project-links {
