@@ -978,6 +978,23 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
+    }
+
+    .media-location {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.45);
+      color: #fff;
+      font-size: 0.78rem;
+      letter-spacing: 0.02em;
+      padding: 5px 14px;
+      border-radius: 20px;
+      white-space: nowrap;
+      pointer-events: none;
+      backdrop-filter: blur(6px);
     }
 
     .media-stage img,
@@ -1998,11 +2015,11 @@
         { type: "image", src: "/images/books/book-3.jpg", thumb: "/images/books/book-3.jpg", alt: "Book note 3" }
       ],
       motion: [
-        { type: "image", src: "/images/motion/motion-1.jpg", thumb: "/images/motion/motion-1.jpg" },
-        { type: "image", src: "/images/motion/motion-2.jpg", thumb: "/images/motion/motion-2.jpg" },
-        { type: "image", src: "/images/motion/motion-3.jpg", thumb: "/images/motion/motion-3.jpg" },
-        { type: "image", src: "/images/motion/motion-4.jpg", thumb: "/images/motion/motion-4.jpg" },
-        { type: "image", src: "/images/motion/motion-5.jpg", thumb: "/images/motion/motion-5.jpg" }
+        { type: "image", src: "/images/motion/motion-1.jpg", thumb: "/images/motion/motion-1.jpg", location: "Hoover Dam, Nevada" },
+        { type: "image", src: "/images/motion/motion-2.jpg", thumb: "/images/motion/motion-2.jpg", location: "Goblin Valley State Park, Utah" },
+        { type: "image", src: "/images/motion/motion-3.jpg", thumb: "/images/motion/motion-3.jpg", location: "Mt Shasta, California" },
+        { type: "image", src: "/images/motion/motion-4.jpg", thumb: "/images/motion/motion-4.jpg", location: "Star Gazing at Utah" },
+        { type: "image", src: "/images/motion/motion-5.jpg", thumb: "/images/motion/motion-5.jpg", location: "Sunset Drive" }
       ]
     };
 
@@ -2054,6 +2071,14 @@
       }
 
       stage.appendChild(el);
+
+      if (item.location) {
+        const loc = document.createElement("div");
+        loc.className = "media-location";
+        loc.textContent = `📍 ${item.location}`;
+        stage.appendChild(loc);
+      }
+
       meta.textContent = `${currentIndex + 1} / ${items.length}`;
 
       thumbs.innerHTML = "";
