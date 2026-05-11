@@ -8,7 +8,7 @@
   <title>Tejaaswini Narendran</title>
 
   <meta name="description"
-    content="Tejaaswini Narendran is a backend and systems engineer building software for real-time systems, robotics, and distributed infrastructure under real-world constraints." />
+    content="Tejaaswini Narendran is a systems engineer working on AI security — building software for real-time systems, robotics, and resilient infrastructure under real-world constraints." />
   <meta name="author" content="Tejaaswini Narendran" />
 
   <link rel="canonical" href="https://www.tejaaswini.com/" />
@@ -16,7 +16,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Tejaaswini Narendran" />
   <meta property="og:description"
-    content="Backend-first, systems-oriented engineering across real-time systems, robotics, and resilient backend infrastructure." />
+    content="Systems engineer working on AI security, real-time systems, robotics, and resilient infrastructure." />
   <meta property="og:url" content="https://www.tejaaswini.com/" />
   <meta property="og:site_name" content="Tejaaswini Narendran" />
 
@@ -345,12 +345,128 @@
     .profile-card {
       position: sticky;
       top: 96px;
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.66), rgba(255, 251, 245, 0.88));
+      max-width: 280px;
+      margin-top: 38px;
+      padding: 14px 14px 20px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(180deg, #fffdf7, #f4ecdc);
       border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow);
-      overflow: hidden;
+      box-shadow:
+        0 18px 40px rgba(28, 20, 11, 0.12),
+        0 2px 0 rgba(15, 107, 79, 0.08) inset;
+    }
+
+    .profile-card::before {
+      content: "";
+      position: absolute;
+      top: -34px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 14px;
+      height: 38px;
+      background: linear-gradient(180deg, #c9b89a, #a8916d);
+      border-radius: 3px;
+      box-shadow: 0 2px 4px rgba(28, 20, 11, 0.15);
+    }
+
+    .profile-card::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 32px;
+      height: 8px;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      box-shadow: inset 0 1px 2px rgba(28, 20, 11, 0.18);
+    }
+
+    .id-header {
+      margin: 4px 0 14px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      background: var(--accent);
+      color: #fffdf7;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .id-header .org {
+      font-weight: 700;
+    }
+
+    .id-header .id-num {
+      opacity: 0.85;
+    }
+
+    .profile-photo-frame {
+      position: relative;
+      border-radius: var(--radius-sm);
+      isolation: isolate;
+    }
+
+    .profile-photo {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--line);
+      filter: saturate(0.94) contrast(1.02);
+      box-shadow: 0 6px 18px rgba(28, 20, 11, 0.12);
+    }
+
+    .profile-caption {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px dashed rgba(15, 107, 79, 0.3);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 4px 10px;
+    }
+
+    .profile-caption .field-label {
+      grid-column: 1 / -1;
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .profile-caption .name {
+      font-family: var(--serif);
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      line-height: 1;
+    }
+
+    .profile-caption .sig {
+      font-family: 'Newsreader', Georgia, serif;
+      font-style: italic;
+      font-size: 14px;
+      color: var(--accent);
+      transform: rotate(-4deg);
+      transform-origin: right bottom;
+    }
+
+    .profile-caption .role {
+      grid-column: 1 / -1;
+      margin-top: 8px;
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent);
     }
 
     .profile-top {
@@ -1106,24 +1222,25 @@
     <section class="hero">
       <div class="hero-grid">
         <div>
-          <div class="kicker">Backend &amp; Systems Engineer · Seattle, Washington <span id="timestamp"></span></div>
+          <div class="kicker">Systems Engineer · AI Security · Seattle, Washington <span id="timestamp"></span></div>
           <p class="hello">🙏 Namaste,</p>
           <h1>I’m TJ</h1>
           <p class="lead">
-            I build backend and systems software for places where
+            I build systems software and work on AI security where
             <strong>latency, reliability, and real-world constraints matter</strong>.
           </p>
           <p class="intro">
-            My work covers real-time systems, robotics, and distributed backend infrastructure. <br />I’ve worked on
-            teleoperation over spotty LTE/4G networks, event-driven sensing for autonomous systems, and production
-            backends that had to stay dependable amid scale, noise, and unexpected failures.
+            My work spans real-time systems, robotics, and the security of AI systems — from agent and model safety to
+            resilient infrastructure underneath them. <br />I’ve worked on teleoperation over spotty LTE/4G networks,
+            event-driven sensing for autonomous systems, and production backends that had to stay dependable amid
+            scale, noise, and unexpected failures.
 
             I work across C++, Python, and cloud infrastructure, always prioritizing observability, resilience, and
             top-notch performance.
 
             <br /><br />
             <span style="color: var(--accent);">I love creating systems that remain calm and collected, no matter how
-              chaotic the world around them gets.</span>
+              chaotic the world around them gets — including when the chaos comes from the AI itself.</span>
           </p>
 
           <div class="cta-row">
@@ -1134,9 +1251,10 @@
           </div>
 
           <div class="chips">
+            <span class="chip">Systems engineering</span>
+            <span class="chip">AI security</span>
             <span class="chip">Real-time systems</span>
             <span class="chip">Robotics software</span>
-            <span class="chip">Distributed backend</span>
             <span class="chip">Observability</span>
           </div>
 
@@ -1147,7 +1265,7 @@
             </div>
             <div class="stat">
               <strong>p99 ~5s → &lt;1s</strong>
-              <span>Latency reduction in production backend workflows</span>
+              <span>Latency reduction in production systems workflows</span>
             </div>
             <div class="stat">
               <strong>Millions/day</strong>
@@ -1157,39 +1275,17 @@
         </div>
 
         <aside class="profile-card">
-          <div class="profile-top">
-            <div class="terminal-dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
-            <div class="profile-label">Profile</div>
+          <div class="id-header">
+            <span class="org">// ID · ENGINEER</span>
+            <span class="id-num">№ 07</span>
           </div>
-          <div class="profile-body">
-            <h2 class="profile-title">Backend, systems and robotics</h2>
-            <p class="profile-copy">
-              I bring a backend-first, systems-oriented approach to software that has to work under real constraints,
-              not just ideal ones.
-            </p>
-
-            <div class="profile-grid">
-              <div class="profile-row">
-                <div class="key">Base</div>
-                <div class="value">Seattle, Washington</div>
-              </div>
-              <div class="profile-row">
-                <div class="key">Core Languages</div>
-                <div class="value">C++, Python</div>
-              </div>
-              <div class="profile-row">
-                <div class="key">Best fit</div>
-                <div class="value">systems software, real-time systems, backend infrastructure, robotics software</div>
-              </div>
-              <div class="profile-row">
-                <div class="key">Strengths</div>
-                <div class="value">low latency, observability, reliability under failure, production ownership</div>
-              </div>
-              <div class="profile-row">
-                <div class="key">I care about</div>
-                <div class="value">clarity, reliability, calm engineering, and systems that hold up in the field</div>
-              </div>
-            </div>
+          <div class="profile-photo-frame">
+            <img src="/tj.jpeg" alt="Tejaaswini Narendran" class="profile-photo" />
+          </div>
+          <div class="profile-caption">
+            <span class="field-label">Name</span>
+            <span class="name">TJ</span>
+            <span class="role">Systems Engineer · AI Security</span>
           </div>
         </aside>
       </div>
@@ -1786,7 +1882,7 @@
 
       <div class="skills-columns">
         <article class="skill-card">
-          <h3>Languages &amp; backend</h3>
+          <h3>Languages &amp; services</h3>
           <ul>
             <li>C++</li>
             <li>Python</li>
@@ -1814,6 +1910,16 @@
             <li>ROS and autonomy pipelines</li>
             <li>Multi-agent systems · real-time inference</li>
             <li>Anomaly detection · RL · simulation</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3>AI &amp; agent security</h3>
+          <ul>
+            <li>MCP session firewalls · agent sandboxing</li>
+            <li>RBAC for agents · scopes · per-argument policy</li>
+            <li>Protocol-level weakness analysis</li>
+            <li>Adversarial behavior detection &amp; mitigation</li>
           </ul>
         </article>
       </div>
@@ -1960,8 +2066,8 @@
             I’m open to roles where the work is thoughtful, difficult, and real.
           </h2>
           <p>
-            Backend, systems, and robotics roles are the best fit. I’m especially interested in teams working on
-            real-time systems,
+            Systems and AI security roles are the best fit. I’m especially interested in teams working on
+            AI safety and security, real-time systems,
             resilient infrastructure, autonomy, observability, or software that has to operate under real constraints.
             <br /><br />
             If that sounds close to what you’re building, I’d be glad to talk.
