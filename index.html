@@ -5,10 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Tejaaswini Narendran</title>
+  <title>Tejaaswini Narendran - Systems Engineer</title>
 
   <meta name="description"
-    content="Tejaaswini Narendran is a systems engineer working on AI security — building software for real-time systems, robotics, and resilient infrastructure under real-world constraints." />
+    content="Systems engineer in Seattle. Founding Platform Engineer at BOB, working on AI infrastructure and security. Previously real-time systems and robotics." />
   <meta name="author" content="Tejaaswini Narendran" />
 
   <link rel="canonical" href="https://www.tejaaswini.com/" />
@@ -19,28 +19,115 @@
     content="Systems engineer working on AI security, real-time systems, robotics, and resilient infrastructure." />
   <meta property="og:url" content="https://www.tejaaswini.com/" />
   <meta property="og:site_name" content="Tejaaswini Narendran" />
+  <meta property="og:image" content="https://www.tejaaswini.com/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt"
+    content="Tejaaswini Narendran, systems engineer. Systems that stay correct under bad conditions." />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0c0b09" id="themeColorMeta" />
+
+  <script>
+    (function () {
+      var theme = "dark";
+      try {
+        var stored = localStorage.getItem("theme");
+        if (stored === "light" || stored === "dark") theme = stored;
+      } catch (e) {
+        /* storage unavailable (private mode): keep the default */
+      }
+      document.documentElement.setAttribute("data-theme", theme);
+      var meta = document.getElementById("themeColorMeta");
+      if (meta) meta.setAttribute("content", theme === "light" ? "#f6f0e7" : "#0c0b09");
+    })();
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&family=Space+Mono:wght@400;700&display=swap"
     rel="stylesheet" />
-  <link rel="icon" type="image/jpg" href="/tj.jpeg" sizes="32x32">
+  <link rel="icon" type="image/jpeg" href="/tj.jpeg" sizes="32x32">
   <style>
     :root {
-      --bg: #f6f0e7;
-      --surface: rgba(255, 251, 245, 0.82);
-      --surface-2: #f9f4ed;
-      --surface-3: #f0e6d9;
-      --text: #1e1a17;
-      --muted: #5b5249;
-      --muted-2: #82776b;
-      --line: rgba(143, 122, 99, 0.22);
-      --line-strong: rgba(128, 106, 84, 0.34);
-      --accent: #0f6b4f;
-      --accent-2: #148a68;
-      --accent-soft: rgba(15, 107, 79, 0.08);
-      --accent-soft-2: rgba(15, 107, 79, 0.13);
+      color-scheme: dark;
+
+      /* warm near-neutral paper-at-night; only the accent carries green */
+      --bg: oklch(15% 0.004 85);
+      --surface: oklch(22% 0.005 85);
+      --surface-2: oklch(22% 0.005 85);
+      --surface-3: oklch(26.5% 0.006 85);
+      --nav-bg: oklch(15% 0.004 85 / 0.85);
+      --card-bg: oklch(22% 0.005 85);
+      --card-bg-strong: oklch(26.5% 0.006 85);
+      --contact-bg-1: oklch(22% 0.005 85);
+      --contact-bg-2: oklch(24.5% 0.0055 85);
+      --modal-bg: oklch(22% 0.005 85);
+      --stage-bg: oklch(12% 0.004 85);
+      --badge-grad-1: oklch(26.5% 0.006 85);
+      --badge-grad-2: oklch(20% 0.005 85);
+      --lanyard-1: oklch(45% 0.008 85);
+      --lanyard-2: oklch(34% 0.007 85);
+
+      /* ink */
+      --text: oklch(95% 0.018 88);
+      --text-strong: oklch(97% 0.018 88);
+      --muted: oklch(76% 0.008 85);
+      --muted-2: oklch(64.5% 0.008 85);
+
+      /* lines */
+      --line: oklch(31% 0.006 85);
+      --line-strong: oklch(40% 0.008 80);
+      --section-line: oklch(27% 0.006 85);
+
+      /* accent */
+      --accent: oklch(80% 0.12 152);
+      --accent-2: oklch(86% 0.11 152);
+      --accent-ink: oklch(19% 0.03 150);
+      --accent-hover: oklch(86% 0.11 152);
+      --accent-soft: oklch(80% 0.12 152 / 0.1);
+      --accent-soft-2: oklch(80% 0.12 152 / 0.16);
+      --accent-rule: oklch(80% 0.12 152 / 0.5);
+      --accent-dashed: oklch(80% 0.12 152 / 0.35);
+      --pill-bg: oklch(80% 0.12 152 / 0.12);
+      --tag-bg: oklch(26.5% 0.006 85);
+      --dot-glow-1: oklch(80% 0.12 152 / 0.14);
+      --dot-glow-2: oklch(80% 0.12 152 / 0.34);
+      --hover-border: oklch(80% 0.12 152 / 0.5);
+
+      /* interactive fills */
+      --control-bg: oklch(26.5% 0.006 85);
+      --control-bg-hover: oklch(30% 0.006 85);
+      --control-solid: oklch(26.5% 0.006 85);
+      --btn-hover-bg: oklch(26.5% 0.006 85);
+      --field-bg: oklch(23% 0.005 85);
+      --field-bg-hover: oklch(26.5% 0.006 85);
+      --stack-bg: oklch(26.5% 0.006 85);
+
+      /* atmosphere: accent-tinted, barely there */
+      --glow-1: oklch(80% 0.12 152 / 0.045);
+      --glow-2: oklch(80% 0.12 152 / 0.03);
+      --grid-line: oklch(80% 0.12 152 / 0.035);
+      --grid-opacity: 0.25;
+
+      /* overlays */
+      --backdrop: oklch(8% 0.003 85 / 0.78);
+      --scrim: oklch(8% 0.003 85 / 0.65);
+      --on-scrim: oklch(97% 0.018 88);
+
+      /* depth */
+      --shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+      --shadow-card: 0 8px 28px rgba(0, 0, 0, 0.28);
+      --shadow-badge: 0 18px 40px rgba(0, 0, 0, 0.5);
+      --shadow-photo: 0 6px 18px rgba(0, 0, 0, 0.45);
+      --shadow-stack: 0 5px 14px rgba(0, 0, 0, 0.4);
+      --shadow-modal: 0 24px 80px rgba(0, 0, 0, 0.65);
+      --shadow-lanyard: 0 2px 4px rgba(0, 0, 0, 0.5);
+      --shadow-slot: inset 0 1px 2px rgba(0, 0, 0, 0.55);
+
+      /* structure (theme-independent) */
       --max: 1150px;
       --serif: 'Newsreader', Georgia, serif;
       --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -48,7 +135,76 @@
       --radius-lg: 28px;
       --radius-md: 20px;
       --radius-sm: 14px;
+      --nav-h: 72px;
+    }
+
+    :root[data-theme="light"] {
+      color-scheme: light;
+
+      --bg: #f6f0e7;
+      --surface: rgba(255, 251, 245, 0.82);
+      --surface-2: #f9f4ed;
+      --surface-3: #f0e6d9;
+      --nav-bg: rgba(246, 240, 231, 0.82);
+      --card-bg: rgba(255, 251, 245, 0.72);
+      --card-bg-strong: rgba(255, 251, 245, 0.88);
+      --contact-bg-1: rgba(255, 251, 245, 0.78);
+      --contact-bg-2: rgba(255, 255, 255, 0.54);
+      --modal-bg: #f7f3eb;
+      --stage-bg: #e9e3d9;
+      --badge-grad-1: #fffdf7;
+      --badge-grad-2: #f4ecdc;
+      --lanyard-1: #c9b89a;
+      --lanyard-2: #a8916d;
+
+      --text: #1e1a17;
+      --text-strong: rgba(30, 26, 23, 0.94);
+      --muted: #5b5249;
+      --muted-2: #82776b;
+
+      --line: rgba(143, 122, 99, 0.22);
+      --line-strong: rgba(128, 106, 84, 0.34);
+      --section-line: rgba(128, 106, 84, 0.12);
+
+      --accent: #0f6b4f;
+      --accent-2: #148a68;
+      --accent-ink: #fffdf7;
+      --accent-hover: #0d5b45;
+      --accent-soft: rgba(15, 107, 79, 0.08);
+      --accent-soft-2: rgba(15, 107, 79, 0.13);
+      --accent-rule: rgba(15, 107, 79, 0.55);
+      --accent-dashed: rgba(15, 107, 79, 0.3);
+      --pill-bg: rgba(15, 107, 79, 0.1);
+      --tag-bg: rgba(15, 107, 79, 0.04);
+      --dot-glow-1: rgba(15, 107, 79, 0.1);
+      --dot-glow-2: rgba(15, 107, 79, 0.3);
+      --hover-border: rgba(15, 107, 79, 0.3);
+
+      --control-bg: rgba(255, 255, 255, 0.52);
+      --control-bg-hover: rgba(255, 255, 255, 0.85);
+      --control-solid: #ffffff;
+      --btn-hover-bg: rgba(255, 255, 255, 0.55);
+      --field-bg: rgba(255, 255, 255, 0.4);
+      --field-bg-hover: rgba(255, 255, 255, 0.7);
+      --stack-bg: #ffffff;
+
+      --glow-1: rgba(15, 107, 79, 0.07);
+      --glow-2: rgba(15, 107, 79, 0.05);
+      --grid-line: rgba(15, 107, 79, 0.03);
+      --grid-opacity: 0.38;
+
+      --backdrop: rgba(10, 10, 10, 0.62);
+      --scrim: rgba(0, 0, 0, 0.45);
+      --on-scrim: #fffdf7;
+
       --shadow: 0 14px 40px rgba(28, 20, 11, 0.06);
+      --shadow-card: 0 8px 28px rgba(28, 20, 11, 0.03);
+      --shadow-badge: 0 18px 40px rgba(28, 20, 11, 0.12), 0 2px 0 rgba(15, 107, 79, 0.08) inset;
+      --shadow-photo: 0 6px 18px rgba(28, 20, 11, 0.12);
+      --shadow-stack: 0 5px 14px rgba(0, 0, 0, 0.06);
+      --shadow-modal: 0 24px 80px rgba(0, 0, 0, 0.22);
+      --shadow-lanyard: 0 2px 4px rgba(28, 20, 11, 0.15);
+      --shadow-slot: inset 0 1px 2px rgba(28, 20, 11, 0.18);
     }
 
     * {
@@ -59,13 +215,14 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--nav-h) + 16px);
     }
 
     body {
       font-family: var(--sans);
       background:
-        radial-gradient(circle at top left, rgba(15, 107, 79, 0.07), transparent 24%),
-        radial-gradient(circle at 85% 10%, rgba(15, 107, 79, 0.05), transparent 22%),
+        radial-gradient(circle at top left, var(--glow-1), transparent 24%),
+        radial-gradient(circle at 85% 10%, var(--glow-2), transparent 22%),
         var(--bg);
       color: var(--text);
       line-height: 1.75;
@@ -82,11 +239,11 @@
       inset: 0;
       pointer-events: none;
       background-image:
-        linear-gradient(rgba(15, 107, 79, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(15, 107, 79, 0.03) 1px, transparent 1px);
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
       background-size: 72px 72px;
       mask-image: radial-gradient(circle at top center, rgba(0, 0, 0, 0.9), transparent 75%);
-      opacity: 0.38;
+      opacity: var(--grid-opacity);
     }
 
     a {
@@ -112,14 +269,14 @@
       top: 0;
       z-index: 40;
       backdrop-filter: blur(14px);
-      background: rgba(246, 240, 231, 0.82);
-      border-bottom: 1px solid rgba(128, 106, 84, 0.12);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--section-line);
     }
 
     .nav-inner {
       max-width: var(--max);
       margin: 0 auto;
-      height: 72px;
+      height: var(--nav-h);
       padding: 0 24px;
       display: flex;
       align-items: center;
@@ -164,7 +321,46 @@
       border: 1px solid var(--accent);
       border-radius: 999px;
       color: var(--accent);
-      background: rgba(15, 107, 79, 0.1);
+      background: var(--pill-bg);
+      white-space: nowrap;
+    }
+
+    .theme-toggle {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--control-bg);
+      color: var(--muted);
+      cursor: pointer;
+      transition: border-color 140ms ease, background 140ms ease, color 140ms ease;
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--accent);
+      background: var(--control-bg-hover);
+      color: var(--accent);
+    }
+
+    /* the root attribute picks the icon, so it is correct at first paint */
+    .theme-toggle .icon-sun {
+      display: block;
+    }
+
+    .theme-toggle .icon-moon {
+      display: none;
+    }
+
+    :root[data-theme="light"] .theme-toggle .icon-sun {
+      display: none;
+    }
+
+    :root[data-theme="light"] .theme-toggle .icon-moon {
+      display: block;
     }
 
     .dot {
@@ -172,7 +368,7 @@
       height: 8px;
       border-radius: 999px;
       background: var(--accent);
-      box-shadow: 0 0 0 5px rgba(15, 107, 79, 0.1);
+      box-shadow: 0 0 0 5px var(--dot-glow-1);
       animation: glow 2s ease-in-out infinite;
     }
 
@@ -180,11 +376,11 @@
 
       0%,
       100% {
-        box-shadow: 0 0 0 5px rgba(15, 107, 79, 0.1);
+        box-shadow: 0 0 0 5px var(--dot-glow-1);
       }
 
       50% {
-        box-shadow: 0 0 0 8px rgba(15, 107, 79, 0.3);
+        box-shadow: 0 0 0 8px var(--dot-glow-2);
       }
     }
 
@@ -196,7 +392,7 @@
       display: grid;
       grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.88fr);
       gap: 34px;
-      align-items: start;
+      align-items: center;
     }
 
     .kicker {
@@ -215,14 +411,7 @@
       content: "";
       width: 34px;
       height: 1px;
-      background: rgba(15, 107, 79, 0.55);
-    }
-
-    #timestamp {
-      font-size: 10px;
-      text-transform: none;
-      letter-spacing: 0;
-      opacity: 0.8;
+      background: var(--accent-rule);
     }
 
     .hello {
@@ -245,7 +434,7 @@
     .lead {
       font-size: clamp(15px, 1.8vw, 18px);
       line-height: 1.62;
-      color: rgba(30, 26, 23, 0.94);
+      color: var(--text-strong);
       max-width: 44rem;
       margin-bottom: 18px;
     }
@@ -286,74 +475,31 @@
     .btn:hover {
       transform: translateY(-1px);
       border-color: var(--accent);
-      background: rgba(255, 255, 255, 0.55);
+      background: var(--btn-hover-bg);
     }
 
     .btn-primary {
       background: var(--accent);
-      color: #fff;
+      color: var(--accent-ink);
       border-color: var(--accent);
     }
 
     .btn-primary:hover {
-      background: #0d5b45;
-      border-color: #0d5b45;
-    }
-
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 22px;
-    }
-
-    .chip {
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.48);
-      border: 1px solid var(--line);
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      max-width: 50rem;
-    }
-
-    .stat {
-      border-top: 1px solid var(--line-strong);
-      padding-top: 14px;
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 16px;
-      color: var(--text);
-      margin-bottom: 6px;
-    }
-
-    .stat span {
-      display: block;
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.65;
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
     }
 
     .profile-card {
       position: sticky;
       top: 96px;
+      width: 100%;
       max-width: 280px;
-      margin-top: 38px;
+      justify-self: center;
       padding: 14px 14px 20px;
       border-radius: var(--radius-md);
-      background: linear-gradient(180deg, #fffdf7, #f4ecdc);
+      background: linear-gradient(180deg, var(--badge-grad-1), var(--badge-grad-2));
       border: 1px solid var(--line);
-      box-shadow:
-        0 18px 40px rgba(28, 20, 11, 0.12),
-        0 2px 0 rgba(15, 107, 79, 0.08) inset;
+      box-shadow: var(--shadow-badge);
     }
 
     .profile-card::before {
@@ -364,9 +510,9 @@
       transform: translateX(-50%);
       width: 14px;
       height: 38px;
-      background: linear-gradient(180deg, #c9b89a, #a8916d);
+      background: linear-gradient(180deg, var(--lanyard-1), var(--lanyard-2));
       border-radius: 3px;
-      box-shadow: 0 2px 4px rgba(28, 20, 11, 0.15);
+      box-shadow: var(--shadow-lanyard);
     }
 
     .profile-card::after {
@@ -380,30 +526,7 @@
       background: var(--bg);
       border: 1px solid var(--line);
       border-radius: 999px;
-      box-shadow: inset 0 1px 2px rgba(28, 20, 11, 0.18);
-    }
-
-    .id-header {
-      margin: 4px 0 14px;
-      padding: 8px 12px;
-      border-radius: 6px;
-      background: var(--accent);
-      color: #fffdf7;
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .id-header .org {
-      font-weight: 700;
-    }
-
-    .id-header .id-num {
-      opacity: 0.85;
+      box-shadow: var(--shadow-slot);
     }
 
     .profile-photo-frame {
@@ -419,13 +542,13 @@
       border-radius: var(--radius-sm);
       border: 1px solid var(--line);
       filter: saturate(0.94) contrast(1.02);
-      box-shadow: 0 6px 18px rgba(28, 20, 11, 0.12);
+      box-shadow: var(--shadow-photo);
     }
 
     .profile-caption {
       margin-top: 18px;
       padding-top: 14px;
-      border-top: 1px dashed rgba(15, 107, 79, 0.3);
+      border-top: 1px dashed var(--accent-dashed);
       display: grid;
       grid-template-columns: 1fr auto;
       align-items: end;
@@ -450,15 +573,6 @@
       line-height: 1;
     }
 
-    .profile-caption .sig {
-      font-family: 'Newsreader', Georgia, serif;
-      font-style: italic;
-      font-size: 14px;
-      color: var(--accent);
-      transform: rotate(-4deg);
-      transform-origin: right bottom;
-    }
-
     .profile-caption .role {
       grid-column: 1 / -1;
       margin-top: 8px;
@@ -469,119 +583,17 @@
       color: var(--accent);
     }
 
-    .profile-top {
-      padding: 18px 22px;
-      border-bottom: 1px solid rgba(15, 107, 79, 0.12);
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      background: linear-gradient(90deg, rgba(15, 107, 79, 0.06), rgba(15, 107, 79, 0.02));
-    }
-
-    .terminal-dots {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
-
-    .terminal-dots span {
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      display: block;
-    }
-
-    .terminal-dots .r {
-      background: #d67467;
-    }
-
-    .terminal-dots .y {
-      background: #d7b258;
-    }
-
-    .terminal-dots .g {
-      background: #55b884;
-    }
-
-    .profile-label {
-      font-family: var(--mono);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--muted-2);
-    }
-
-    .profile-body {
-      padding: 22px;
-    }
-
-    .profile-title {
-      font-family: var(--serif);
-      font-size: 22px;
-      line-height: 1.02;
-      letter-spacing: -0.045em;
-      margin-bottom: 14px;
-      max-width: none;
-    }
-
-    .profile-copy {
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    .profile-grid {
-      display: grid;
-      gap: 16px;
-    }
-
-    .profile-row {
-      padding-top: 14px;
-      border-top: 1px solid var(--line);
-      display: grid;
-      grid-template-columns: 128px 1fr;
-      gap: 14px;
-    }
-
-    .profile-row .key {
-      font-family: var(--mono);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--accent);
-    }
-
-    .profile-row .value {
-      color: var(--text);
-      font-weight: 600;
-    }
-
     main {
       padding-bottom: 84px;
     }
 
     section {
       padding: 72px 0;
-      border-top: 1px solid rgba(128, 106, 84, 0.12);
+      border-top: 1px solid var(--section-line);
     }
 
     .section-head {
-      display: grid;
-      grid-template-columns: 110px minmax(0, 1fr);
-      gap: 24px;
-      align-items: start;
       margin-bottom: 30px;
-    }
-
-    .section-label {
-      font-family: var(--mono);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--accent);
-      padding-top: 8px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
     }
 
     .hand-drawn-icon {
@@ -596,45 +608,20 @@
       line-height: 1.06;
       letter-spacing: -0.045em;
       margin-bottom: 10px;
-      max-width: none;
-    }
-
-    .section-copy {
-      max-width: none;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .build-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
+      max-width: 26ch;
+      text-wrap: balance;
     }
 
     .build-card,
-    .research-card,
-    .skill-card,
     .note-card {
-      background: rgba(255, 251, 245, 0.72);
+      background: var(--card-bg);
       border: 1px solid var(--line);
       border-radius: var(--radius-md);
       padding: 22px;
-      box-shadow: 0 8px 28px rgba(28, 20, 11, 0.03);
-    }
-
-    .research-list {
-      margin: 14px 0 0 0;
-      padding-left: 18px;
-      color: var(--muted);
-      line-height: 1.75;
-    }
-
-    .research-list li+li {
-      margin-top: 6px;
+      box-shadow: var(--shadow-card);
     }
 
     .build-kicker,
-    .card-kicker,
     .note-kicker {
       font-family: var(--mono);
       font-size: 11px;
@@ -645,8 +632,6 @@
     }
 
     .build-card h3,
-    .research-card h3,
-    .skill-card h3,
     .note-card h3 {
       font-size: 18px;
       line-height: 1.25;
@@ -655,11 +640,13 @@
     }
 
     .build-card p,
-    .research-card p,
-    .note-card p,
-    .skill-card p {
+    .note-card p {
       color: var(--muted);
       font-size: 14px;
+    }
+
+    .inline-link {
+      text-decoration: underline;
     }
 
     .tag-row {
@@ -674,50 +661,19 @@
       padding: 7px 10px;
       border-radius: 999px;
       border: 1px solid var(--line);
-      background: rgba(15, 107, 79, 0.04);
+      background: var(--tag-bg);
       color: var(--muted);
     }
 
     .timeline {
-      position: relative;
-      padding-left: 40px;
-    }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 20px;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: var(--accent);
-      opacity: 0.3;
+      display: grid;
+      gap: 44px;
     }
 
     .entry {
-      position: relative;
-      padding: 22px 0 22px 0;
-      margin-left: 20px;
-    }
-
-    .entry::before {
-      content: '';
-      position: absolute;
-      left: -40px;
-      top: 22px;
-      width: 12px;
-      height: 12px;
-      background: var(--accent);
-      border-radius: 50%;
-      border: 2px solid var(--bg);
-    }
-
-    .entry:first-child {
-      padding-top: 0;
-    }
-
-    .entry:last-child {
-      padding-bottom: 0;
+      display: grid;
+      grid-template-columns: 240px minmax(0, 1fr);
+      gap: 12px 40px;
     }
 
     .entry-time {
@@ -743,7 +699,10 @@
     .entry p {
       color: var(--muted);
       margin-bottom: 12px;
-      max-width: 50rem;
+    }
+
+    .entry > div > :last-child {
+      margin-bottom: 0;
     }
 
     .entry ul {
@@ -753,23 +712,9 @@
       gap: 8px;
     }
 
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .skills-columns {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .skill-card ul {
-      list-style: none;
-      display: grid;
-      gap: 10px;
-      color: var(--muted);
+    .entry ul + p {
+      margin-top: 12px;
+      margin-bottom: 0;
     }
 
     .notes-grid {
@@ -784,7 +729,7 @@
       gap: 24px;
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
-      background: linear-gradient(135deg, rgba(255, 251, 245, 0.78), rgba(255, 255, 255, 0.54));
+      background: linear-gradient(135deg, var(--contact-bg-1), var(--contact-bg-2));
       box-shadow: var(--shadow);
       padding: 28px;
     }
@@ -817,14 +762,14 @@
       padding: 16px 18px;
       border-radius: var(--radius-sm);
       border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.4);
+      background: var(--field-bg);
       transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
     }
 
     .contact-link:hover {
       transform: translateY(-1px);
-      border-color: rgba(15, 107, 79, 0.3);
-      background: rgba(255, 255, 255, 0.7);
+      border-color: var(--hover-border);
+      background: var(--field-bg-hover);
     }
 
     .contact-link span:first-child {
@@ -847,15 +792,19 @@
       font-size: 13px;
     }
 
+    .site-footer {
+      margin-top: -30px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--text);
+    }
+
     @media (max-width: 980px) {
 
       .hero-grid,
       .contact-box,
       .entry,
-      .section-head,
-      .skills-columns,
-      .build-grid,
-      .grid-2,
       .notes-grid {
         grid-template-columns: 1fr;
       }
@@ -863,22 +812,14 @@
       .profile-card {
         position: static;
       }
-
-      .section-head {
-        gap: 10px;
-      }
-
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
-      .profile-row {
-        grid-template-columns: 1fr;
-        gap: 8px;
-      }
     }
 
     @media (max-width: 780px) {
+      :root {
+        /* nav wraps to three rows below this width; keeps anchor jumps clear of it */
+        --nav-h: 160px;
+      }
+
       .nav-inner {
         height: auto;
         padding-top: 14px;
@@ -891,8 +832,20 @@
         width: 100%;
       }
 
+      /* one scrollable row, so a longer link label can't add a fourth nav row */
       .nav-links {
         gap: 16px;
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+        padding: 4px;
+        margin: -4px;
+        white-space: nowrap;
+      }
+
+      .nav-links::-webkit-scrollbar {
+        display: none;
       }
 
       .hero {
@@ -939,7 +892,7 @@
       height: 34px;
       border-radius: 999px;
       border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.52);
+      background: var(--control-bg);
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -950,17 +903,424 @@
     .icon-link:hover {
       transform: translateY(-1px);
       border-color: var(--accent);
-      background: rgba(255, 255, 255, 0.85);
+      background: var(--control-bg-hover);
       color: var(--accent);
     }
 
-    #projects .build-kicker {
+    #work .build-kicker,
+    #research .build-kicker {
       margin-bottom: 0;
     }
 
-    #projects .build-card h3 {
+    #work .build-card h3,
+    #research .build-card h3 {
       margin-bottom: 10px;
     }
+
+    .project-feature {
+      background: var(--card-bg-strong);
+      border-color: var(--line-strong);
+    }
+
+    #work .projects-grid .build-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #work .projects-grid .tag-row {
+      margin-top: auto;
+      padding-top: 16px;
+    }
+
+    #work .projects-grid .outcome-badge {
+      align-self: flex-start;
+    }
+
+    .card-proof {
+      margin-top: 14px;
+      padding-left: 12px;
+      border-left: 2px solid var(--accent);
+      font-family: var(--mono);
+      font-size: 12.5px;
+      line-height: 1.6;
+      color: var(--muted);
+      overflow-wrap: anywhere;
+    }
+
+    #work .projects-grid .build-card p.card-proof {
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+
+    .trace {
+      padding: 22px;
+      margin-top: 18px;
+      background: var(--card-bg-strong);
+      border: 1px solid var(--accent-rule);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-card);
+    }
+
+    #work .trace .build-kicker {
+      margin-bottom: 12px;
+    }
+
+    .trace h3 {
+      font-size: 22px;
+      line-height: 1.25;
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+    }
+
+    .trace-intro {
+      font-size: 15px;
+      color: var(--text);
+    }
+
+    .trace-steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+      list-style: none;
+    }
+
+    .trace-step {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      position: relative;
+      padding: 16px;
+      background: var(--surface-2);
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius-sm);
+    }
+
+    .trace-step:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -13px;
+      width: 8px;
+      height: 8px;
+      border-top: 2px solid var(--accent);
+      border-right: 2px solid var(--accent);
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    .trace-step-final {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .trace-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      width: 100%;
+    }
+
+    .trace-num {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      color: var(--muted-2);
+    }
+
+    .trace-status {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .trace-step-final .trace-status {
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: var(--accent-ink);
+      font-weight: 700;
+    }
+
+    .trace-call {
+      font-family: var(--mono);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      overflow-wrap: anywhere;
+    }
+
+    .trace-step p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .trace-rule {
+      margin-top: auto;
+      font-family: var(--mono);
+      font-size: 11px;
+      padding: 5px 9px;
+      overflow-wrap: anywhere;
+      max-width: 100%;
+    }
+
+    .trace-rule-accent {
+      border-color: var(--accent);
+      background: var(--pill-bg);
+      color: var(--accent);
+    }
+
+    .trace-foot {
+      margin-top: 18px;
+      font-size: 12.5px;
+      line-height: 1.6;
+      color: var(--muted-2);
+    }
+
+    .index-row.index-row-link {
+      grid-template-columns: minmax(0, 1fr) auto;
+    }
+
+    .index-row-link .index-tech {
+      justify-self: end;
+    }
+
+    .index-list.writing-list {
+      display: grid;
+      gap: 10px;
+      border-top: 0;
+    }
+
+    .writing-list .index-row.index-row-link {
+      padding: 8px 18px;
+      border: 0;
+      background-color: var(--card-bg);
+    }
+
+    .writing-list .index-row.index-row-link:hover,
+    .writing-list .index-row.index-row-link:focus-within {
+      background-color: var(--surface-3);
+    }
+
+    .writing-more {
+      margin-top: 18px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 780px) {
+      .trace-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .trace-step:not(:last-child)::after {
+        top: auto;
+        bottom: -13px;
+        right: 50%;
+        transform: translateX(50%) rotate(135deg);
+      }
+    }
+
+    .project-feature h3 {
+      font-size: clamp(21px, 2vw, 24px);
+    }
+
+    .card-hook {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .card-support {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .outcome-badge {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 16px;
+      padding: 7px 13px;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      background: var(--accent-soft-2);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      transition: background 140ms ease, transform 140ms ease;
+    }
+
+    .outcome-badge:hover {
+      background: var(--accent-soft);
+      transform: translateY(-1px);
+    }
+
+    .card-note {
+      margin-top: 14px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      color: var(--muted-2);
+    }
+
+    .index-head {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 6px 14px;
+      margin: 44px 0 14px;
+    }
+
+    .index-head h3 {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+    }
+
+    .index-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .index-row {
+      display: grid;
+      grid-template-columns: 30px minmax(120px, 180px) minmax(0, 1fr) 200px 96px;
+      align-items: center;
+      gap: 18px;
+      min-height: 60px;
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      transition: background-color 180ms ease;
+    }
+
+    .index-row:hover,
+    .index-row:focus-within {
+      background-color: var(--surface-3);
+    }
+
+    .index-row:hover .index-name,
+    .index-row:focus-within .index-name {
+      color: var(--accent);
+    }
+
+    .index-num {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted-2);
+    }
+
+    .index-name {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      transition: color 180ms ease;
+    }
+
+    .index-desc {
+      font-size: 13px;
+      color: var(--muted);
+      max-width: 44ch;
+    }
+
+    .index-tech {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted-2);
+      white-space: nowrap;
+    }
+
+    .index-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 6px;
+    }
+
+    .index-links .icon-link {
+      position: relative;
+      width: 28px;
+      height: 28px;
+      border-color: transparent;
+      background: transparent;
+    }
+
+    /* keeps a 44px hit area around the 28px control */
+    .index-links .icon-link::before {
+      content: "";
+      position: absolute;
+      inset: -8px;
+    }
+
+    .index-links .icon-link:hover {
+      border-color: var(--accent);
+      background: var(--control-bg);
+    }
+
+    @media (max-width: 720px) {
+      .index-row {
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas:
+          "name links"
+          "desc desc"
+          "tech tech";
+        align-items: start;
+        gap: 4px 12px;
+        padding: 14px 10px;
+      }
+
+      .index-num {
+        display: none;
+      }
+
+      .index-name {
+        grid-area: name;
+      }
+
+      .index-links {
+        grid-area: links;
+      }
+
+      .index-desc {
+        grid-area: desc;
+        max-width: none;
+      }
+
+      .index-tech {
+        grid-area: tech;
+      }
+    }
+
+    .paper-title {
+      font-family: var(--serif);
+      font-size: clamp(22px, 2.2vw, 28px);
+      line-height: 1.12;
+      letter-spacing: -0.035em;
+    }
+
+    .paper-meta {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+
+    .section-note {
+      margin-top: 14px;
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
 
     @media (max-width: 980px) {
       .projects-grid {
@@ -999,8 +1359,8 @@
       object-fit: cover;
       border-radius: 10px;
       border: 1px solid var(--line);
-      background: #fff;
-      box-shadow: 0 5px 14px rgba(0, 0, 0, 0.06);
+      background: var(--stack-bg);
+      box-shadow: var(--shadow-stack);
       transition: transform 180ms ease, box-shadow 180ms ease;
     }
 
@@ -1041,20 +1401,20 @@
     }
 
     .media-modal {
-      position: fixed;
-      inset: 0;
-      display: none;
-      z-index: 9999;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      max-height: 100%;
+      border: 0;
+      padding: 0;
+      background: transparent;
+      color: var(--text);
+      overflow: auto;
+      overscroll-behavior: contain;
     }
 
-    .media-modal.open {
-      display: block;
-    }
-
-    .media-backdrop {
-      position: absolute;
-      inset: 0;
-      background: rgba(10, 10, 10, 0.62);
+    .media-modal::backdrop {
+      background: var(--backdrop);
       backdrop-filter: blur(6px);
     }
 
@@ -1063,12 +1423,12 @@
       width: min(960px, calc(100vw - 32px));
       max-height: calc(100vh - 32px);
       margin: 16px auto;
-      background: #f7f3eb;
+      background: var(--modal-bg);
       border: 1px solid var(--line);
       border-radius: 24px;
       padding: 18px;
       overflow: hidden;
-      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.22);
+      box-shadow: var(--shadow-modal);
     }
 
     .media-close {
@@ -1079,7 +1439,8 @@
       height: 40px;
       border: 1px solid var(--line);
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.92);
+      background: var(--control-solid);
+      color: var(--text);
       cursor: pointer;
       font-size: 24px;
       line-height: 1;
@@ -1090,7 +1451,7 @@
       height: min(68vh, 700px);
       border-radius: 18px;
       overflow: hidden;
-      background: #e9e3d9;
+      background: var(--stage-bg);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1102,8 +1463,8 @@
       bottom: 14px;
       left: 50%;
       transform: translateX(-50%);
-      background: rgba(0, 0, 0, 0.45);
-      color: #fff;
+      background: var(--scrim);
+      color: var(--on-scrim);
       font-size: 0.78rem;
       letter-spacing: 0.02em;
       padding: 5px 14px;
@@ -1113,19 +1474,11 @@
       backdrop-filter: blur(6px);
     }
 
-    .media-stage img,
-    .media-stage video {
+    .media-stage img {
       max-width: 100%;
       max-height: 100%;
       display: block;
       border-radius: 14px;
-    }
-
-    .media-stage video {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      background: #000;
     }
 
     .media-controls {
@@ -1137,11 +1490,12 @@
     }
 
     .media-nav {
-      width: 42px;
-      height: 42px;
+      width: 44px;
+      height: 44px;
       border-radius: 999px;
       border: 1px solid var(--line);
-      background: white;
+      background: var(--control-solid);
+      color: var(--text);
       cursor: pointer;
       font-size: 18px;
     }
@@ -1166,7 +1520,7 @@
       height: 62px;
       border-radius: 12px;
       border: 1px solid var(--line);
-      background: white;
+      background: var(--control-solid);
       overflow: hidden;
       cursor: pointer;
       flex-shrink: 0;
@@ -1178,8 +1532,7 @@
       outline-offset: 2px;
     }
 
-    .media-thumb img,
-    .media-thumb video {
+    .media-thumb img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -1198,6 +1551,53 @@
         height: 52vh;
       }
     }
+
+    a:focus-visible,
+    button:focus-visible,
+    [tabindex]:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .inline-link:focus-visible,
+    .nav-links a:focus-visible,
+    .brand:focus-visible {
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .dot {
+        animation: none;
+      }
+
+      .btn:hover,
+      .contact-link:hover,
+      .icon-link:hover,
+      .outcome-badge:hover {
+        transform: none;
+      }
+
+      .gallery-stack img {
+        transition: none;
+      }
+
+      .gallery-trigger:hover .gallery-stack img:nth-child(1) {
+        transform: rotate(-10deg);
+      }
+
+      .gallery-trigger:hover .gallery-stack img:nth-child(2) {
+        transform: rotate(-2deg);
+      }
+
+      .gallery-trigger:hover .gallery-stack img:nth-child(3) {
+        transform: rotate(8deg);
+      }
+    }
   </style>
 </head>
 
@@ -1206,15 +1606,31 @@
     <div class="nav-inner">
       <a href="#top" class="brand">Tejaaswini <span>Narendran</span></a>
       <ul class="nav-links">
-        <li><a href="#work">Work</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#work">Projects</a></li>
         <li><a href="#research">Research</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#beyond">Beyond work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#about">Beyond work</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="pill"><span class="dot"></span> Open to roles</div>
+      <a href="#contact" class="pill"><span class="dot"></span> Open to collaborations</a>
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to light theme">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.5"></circle>
+          <line x1="12" y1="1.5" x2="12" y2="4"></line>
+          <line x1="12" y1="20" x2="12" y2="22.5"></line>
+          <line x1="3.5" y1="3.5" x2="5.3" y2="5.3"></line>
+          <line x1="18.7" y1="18.7" x2="20.5" y2="20.5"></line>
+          <line x1="1.5" y1="12" x2="4" y2="12"></line>
+          <line x1="20" y1="12" x2="22.5" y2="12"></line>
+          <line x1="3.5" y1="20.5" x2="5.3" y2="18.7"></line>
+          <line x1="18.7" y1="5.3" x2="20.5" y2="3.5"></line>
+        </svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5a8.5 8.5 0 1 0 10.8 10.8z"></path>
+        </svg>
+      </button>
     </div>
   </nav>
 
@@ -1222,342 +1638,54 @@
     <section class="hero">
       <div class="hero-grid">
         <div>
-          <div class="kicker">Systems Engineer · AI Security · Seattle, Washington <span id="timestamp"></span></div>
-          <p class="hello">🙏 Namaste,</p>
-          <h1>I’m TJ</h1>
+          <div class="kicker">Systems Engineer &middot; AI Security &middot; Seattle</div>
+          <p class="hello">Namaste &#128591;,</p>
+          <h1>I&rsquo;m TJ</h1>
           <p class="lead">
-            I build systems software and work on AI security where
-            <strong>latency, reliability, and real-world constraints matter</strong>.
+            I build systems that have to <strong>stay correct under bad conditions</strong>: teleoperation over spotty
+            LTE, PX4 flight software under fault injection, banking pipelines handling millions of events a day.
           </p>
           <p class="intro">
-            My work spans real-time systems, robotics, and the security of AI systems — from agent and model safety to
-            resilient infrastructure underneath them. <br />I’ve worked on teleoperation over spotty LTE/4G networks,
-            event-driven sensing for autonomous systems, and production backends that had to stay dependable amid
-            scale, noise, and unexpected failures.
-
-            I work across C++, Python, and cloud infrastructure, always prioritizing observability, resilience, and
-            top-notch performance.
-
-            <br /><br />
-            <span style="color: var(--accent);">I love creating systems that remain calm and collected, no matter how
-              chaotic the world around them gets — including when the chaos comes from the AI itself.</span>
+            I&rsquo;m a founding platform engineer at <a href="https://joinbob.ai/" target="_blank" rel="noopener noreferrer" class="inline-link">BOB</a>, working on AI infrastructure and security.
           </p>
 
           <div class="cta-row">
-            <a href="mailto:tejnaren07@gmail.com" class="btn btn-primary">Email me</a>
+            <a href="mailto:tejnaren07@gmail.com" class="btn btn-primary">Email</a>
             <a href="https://github.com/Tejaaswini" target="_blank" rel="noreferrer" class="btn">GitHub</a>
             <a href="https://www.linkedin.com/in/tejaaswini/" target="_blank" rel="noreferrer" class="btn">LinkedIn</a>
-            <a href="https://medium.com/@tejnaren07" target="_blank" rel="noreferrer" class="btn">Writing</a>
-          </div>
-
-          <div class="chips">
-            <span class="chip">Systems engineering</span>
-            <span class="chip">AI security</span>
-            <span class="chip">Real-time systems</span>
-            <span class="chip">Robotics software</span>
-            <span class="chip">Observability</span>
+            <a href="#writing" class="btn">Writing</a>
+            <a href="https://scholar.google.com/citations?user=fxnPoFQAAAAJ&amp;hl=en" target="_blank"
+              rel="noreferrer" class="btn">Scholar</a>
           </div>
         </div>
 
         <aside class="profile-card">
 
           <div class="profile-photo-frame">
-            <img src="/tj.jpeg" alt="Tejaaswini Narendran" class="profile-photo" />
+            <img src="/tj.jpeg" alt="Tejaaswini Narendran" class="profile-photo" width="1024" height="1536" />
           </div>
           <div class="profile-caption">
             <span class="field-label">Name</span>
             <span class="name">TJ</span>
-            <span class="role">Systems Engineer · AI Security</span>
+            <span class="role">Systems Engineer &middot; AI Security</span>
           </div>
         </aside>
       </div>
     </section>
 
-    <section id="experience">
+    <section id="work">
       <div class="section-head">
-        <div class="section-label">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-            class="hand-drawn-icon">
-            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke="var(--accent)" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round" />
-            <line x1="16" y1="2" x2="16" y2="6" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
-            <line x1="8" y1="2" x2="8" y2="6" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
-            <line x1="3" y1="10" x2="21" y2="10" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-          Experience
-        </div>
-        <div>
-          <h2 class="section-title">I’ve built across startups, research, and production systems.</h2>
-          <p class="section-copy">
-            Different settings, same pull: software that had to perform, stay reliable, and remain debuggable under
-            pressure.
-          </p>
-        </div>
-      </div>
-
-      <div class="timeline">
-        <article class="entry">
-          <div>
-            <div class="entry-time">Jan 2026 — Jun 2026</div>
-            <div class="entry-place">Twinloop · Santa Clara, CA</div>
-          </div>
-          <div>
-            <h3>Senior Software Engineer</h3>
-            <p>
-              Built AI agents for marketing and brand workflows on an early-stage founding team. The company shut
-              down in June 2026.
-            </p>
-          </div>
-        </article>
-
-        <article class="entry">
-          <div>
-            <div class="entry-time">Aug 2025 — Jan 2026</div>
-            <div class="entry-place">mundane · Palo Alto, CA</div>
-          </div>
-          <div>
-            <h3>Systems Software Engineer</h3>
-            <p>
-              Built a correctness-first, low-latency teleoperation data plane in C++ for video and telemetry over
-              unreliable networks, maintaining sub-200ms tail latency under live bandwidth variability.
-            </p>
-            <ul>
-              <li>Built packetization, sequencing, buffering, and failure-handling mechanisms for real-time streams.
-              </li>
-              <li>Added end-to-end instrumentation for latency, jitter, and packet loss.</li>
-              <li>Deployed and operated latency-sensitive services on GCP with Docker, owning observability, debugging,
-                and production reliability end to end.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="entry">
-          <div>
-            <div class="entry-time">Sep 2024 — Dec 2025</div>
-            <div class="entry-place">George Washington University · Washington, D.C.</div>
-          </div>
-          <div>
-            <h3>R&amp;D Engineer</h3>
-            <p>
-              Built real-time, event-driven autonomy pipelines for drones and rovers, integrating sensing, control, and
-              fault-detection systems under strict latency and reliability constraints.
-            </p>
-            <ul>
-              <li>Modified PX4-based flight-control software in C++ through custom messaging, sensor integration, and
-                adversarial test workflows.</li>
-              <li>Architected sub-200ms sensor and coordination pipelines over UDP for anomaly detection and recovery.
-              </li>
-              <li>Built simulation and replay tooling for fault injection and diagnosis, surfacing integration bugs that
-                had blocked field testing.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="entry">
-          <div>
-            <div class="entry-time">Jan 2025 — May 2025</div>
-            <div class="entry-place">George Washington University · Washington, D.C.</div>
-          </div>
-          <div>
-            <h3>Teaching Assistant</h3>
-            <p>
-              Supported a graduate and undergraduate course on autonomous systems, helping teach the fundamentals of
-              controls, PID tuning, and autonomous vehicle design through hands-on rover development.
-            </p>
-            <ul>
-              <li>Taught the basics of feedback control, PID behavior, and system tuning for real robotic platforms.
-              </li>
-              <li>Helped students design, build, and debug an autonomous rover across sensing, control, and integration
-                workflows.
-              </li>
-              <li>Worked closely with students on implementation details, failure cases, and the gap between clean
-                theory and messy physical systems.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="entry">
-          <div>
-            <div class="entry-time">Jan 2022 — Jan 2024</div>
-            <div class="entry-place">Gale Partners · New York, NY</div>
-          </div>
-          <div>
-            <h3>Backend Developer</h3>
-            <p>
-              Built and fixed production backend systems in a high-pressure financial environment, with a focus on
-              latency, reliability, and operational clarity.
-            </p>
-            <ul>
-              <li>Eliminated a systemic p95 latency regression in core banking APIs, reducing latency from 5s to under
-                1s.</li>
-              <li>Built event-driven transaction pipelines for millions of daily events with robust failure handling and
-                reliable consumer behavior.</li>
-              <li>Shipped shared middleware for auth, tracing, and rate limiting across six microservices.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="entry">
-          <div>
-            <div class="entry-time">Jan 2020 — Jan 2022</div>
-            <div class="entry-place">Follo Platforms · Bengaluru, India</div>
-          </div>
-          <div>
-            <h3>Founding Engineer</h3>
-            <p>
-              Built the initial product and platform from the ground up, making core product and technical decisions
-              without an existing playbook.
-            </p>
-            <ul>
-              <li>Shipped customer-facing features every week for two years.</li>
-              <li>Built a real-time rules engine that routed alerts within 500ms, reducing missed critical incidents by
-                about 40%.</li>
-              <li>Owned all production infrastructure, autoscaling, monitoring, deployment, and runbooks as the sole
-                infra owner, maintaining 99.9% uptime.</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="section-head">
-        <div class="section-label">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-            class="hand-drawn-icon">
-            <path d="M3 7V5C3 3.9 3.9 3 5 3H19C20.1 3 21 3.9 21 5V7" stroke="var(--accent)" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M21 7V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V7" stroke="var(--accent)" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M7 11H17" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
-            <path d="M7 15H17" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-          Projects
-        </div>
-        <div>
-          <h2 class="section-title">Projects grounded in real systems problems.</h2>
-          <p class="section-copy">
-            A few things I’ve built around observability, reliability, robotics, simulation, and software that has to
-            behave well under real constraints.
-          </p>
-        </div>
+        <h2 class="section-title">Projects</h2>
       </div>
 
       <div class="projects-grid">
 
-        <article class="build-card">
-          <div class="project-head">
-            <div class="build-kicker">AI Infrastructure</div>
-            <div class="project-links">
-              <a href="https://gubbi.ai/" target="_blank" rel="noreferrer" class="icon-link"
-                title="Website" aria-label="Gubbi Website">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="2" y1="12" x2="22" y2="12"></line>
-                  <path d="m12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-                  </path>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <h3>Gubbi</h3>
-          <p>
-            Persistent memory infrastructure for LLMs, a provider-neutral layer that gives any LLM client one
-            portable context across sessions, devices, and providers, running fully offline.
-          </p>
-          <div class="tag-row">
-            <span class="tag">MCP</span>
-            <span class="tag">Python</span>
-            <span class="tag">Memory Systems</span>
-            <span class="tag">Local-First</span>
-          </div>
-        </article>
-
-        <article class="build-card">
-          <div class="project-head">
-            <div class="build-kicker">Health Daemon</div>
-            <div class="project-links">
-              <a href="https://github.com/Tejaaswini/companion-health" target="_blank" rel="noreferrer"
-                class="icon-link" title="GitHub" aria-label="Drone Builder GitHub">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                </svg>
-              </a>
-            </div>
-          </div>
-          <h3>Companion Health</h3>
-          <p>
-            A low-level C++ MAVLink health daemon for companion computers, designed to expose hardware and service
-            health under fault conditions through a custom health message protocol.
-          </p>
-          <div class="tag-row">
-            <span class="tag">C++</span>
-            <span class="tag">MAVLink</span>
-            <span class="tag">Health Monitoring</span>
-          </div>
-        </article>
-
-        <article class="build-card">
-          <div class="project-head">
-            <div class="build-kicker">Vault Physician</div>
-            <div class="project-links">
-              <a href="https://github.com/Tejaaswini/obsidian-plugin" target="_blank" rel="noreferrer"
-                class="icon-link" title="GitHub" aria-label="Vault Physician GitHub">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                </svg>
-              </a>
-              <a href="https://medium.com/@tejnaren07/my-obsidian-vault-was-rotting-so-i-wrote-a-plugin-to-diagnose-it-a1343830fbbb" target="_blank" rel="noreferrer"
-                class="icon-link" title="Medium Article" aria-label="Vault Physician Medium Article">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
-                </svg>
-              </a>
-              <a href="https://www.loom.com/share/158b521201b445da9b55c53e1df40f86" target="_blank" rel="noreferrer"
-                class="icon-link" title="Demo Video" aria-label="Vault Physician Loom Demo">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" />
-                </svg>
-              </a>
-            </div>
-          </div>
-          <h3>Vault Physician: Obsidian Plugin</h3>
-          <p>
-            AI-powered vault health monitor for Obsidian. Finds orphaned notes, stale content, tag sprawl, and broken
-            structure with one-click fixes.
-          </p>
-          <iframe src="https://www.loom.com/embed/158b521201b445da9b55c53e1df40f86"
-                  width="100%"
-                  height="400"
-                  frameborder="0"
-                  webkitallowfullscreen
-                  mozallowfullscreen
-                  allowfullscreen
-                  style="border-radius: 12px; margin-top: 20px;">
-          </iframe>
-          <div class="tag-row">
-            <span class="tag">Obsidian</span>
-            <span class="tag">AI</span>
-            <span class="tag">Knowledge Management</span>
-          </div>
-        </article>
-
-        <article class="build-card">
+        <article class="build-card project-feature">
           <div class="project-head">
             <div class="build-kicker">AI Security</div>
             <div class="project-links">
-              <a href="https://github.com/Tejaaswini/flint" target="_blank" rel="noreferrer"
-                class="icon-link" title="GitHub" aria-label="Flint GitHub">
+              <a href="https://github.com/Tejaaswini/flint" target="_blank" rel="noreferrer" class="icon-link"
+                title="GitHub" aria-label="Flint GitHub">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                   <path
                     d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -1573,8 +1701,8 @@
                   </path>
                 </svg>
               </a>
-              <a href="https://www.loom.com/share/9cb5cb6d1e604490a0f589e2820cf58c" target="_blank" rel="noreferrer" class="icon-link"
-                title="Demo Video" aria-label="Flint Loom Demo">
+              <a href="https://www.loom.com/share/9cb5cb6d1e604490a0f589e2820cf58c" target="_blank" rel="noreferrer"
+                class="icon-link" title="Demo Video" aria-label="Flint Loom Demo">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                   stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="12" cy="12" r="10"></circle>
@@ -1584,40 +1712,35 @@
             </div>
           </div>
           <h3>Flint</h3>
-          <p>
-            A session firewall for MCP-connected agents. Enforces RBAC - roles, bindings, scopes, and per-argument
-            constraints - then tracks data flow across calls to catch exfiltration attacks that per-request inspection misses.
-            <strong style="color: #2a7a2a; font-weight: 700;">Selected for Canopy by Founders Inc (<a href="https://f.inc/" target="_blank" rel="noreferrer" style="text-decoration: underline;">f.inc</a>).</strong>
+          <p class="card-hook">A session firewall for AI agents connected over MCP.</p>
+          <p class="card-support">
+            Tracks data flow across a session and catches exfiltration that per-request checks miss.
           </p>
-          <iframe src="https://www.loom.com/embed/9cb5cb6d1e604490a0f589e2820cf58c" 
-                  width="100%" 
-                  height="400" 
-                  frameborder="0" 
-                  webkitallowfullscreen 
-                  mozallowfullscreen 
-                  allowfullscreen 
-                  style="border-radius: 12px; margin-top: 20px;">
-          </iframe>
+          <p class="card-proof">Regression corpus: 12 recorded sessions replayed, 13 findings, 0 false positives, 0
+            misses.</p>
+          <a class="outcome-badge" href="https://f.inc/" target="_blank" rel="noreferrer">
+            Selected for Canopy by Founders Inc.
+          </a>
           <div class="tag-row">
             <span class="tag">MCP</span>
-            <span class="tag">AI Security</span>
+            <span class="tag">RBAC</span>
             <span class="tag">Agents</span>
           </div>
         </article>
 
         <article class="build-card">
           <div class="project-head">
-            <div class="build-kicker">Simulation Platform</div>
+            <div class="build-kicker">AI Infrastructure</div>
             <div class="project-links">
-              <a href="https://github.com/gladosLabs/drone_builder" target="_blank" rel="noreferrer" class="icon-link"
-                title="GitHub" aria-label="Drone Builder GitHub">
+              <a href="https://github.com/meepolabs/gubbi" target="_blank" rel="noreferrer" class="icon-link"
+                title="Gubbi on GitHub" aria-label="Gubbi on GitHub">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                   <path
                     d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                 </svg>
               </a>
-              <a href="https://drone-builder.vercel.app/" target="_blank" rel="noreferrer" class="icon-link"
-                title="Live Demo" aria-label="Drone Builder Live Demo">
+              <a href="https://gubbi.ai/" target="_blank" rel="noreferrer" class="icon-link" title="Website"
+                aria-label="Gubbi Website">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                   stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="12" cy="12" r="10"></circle>
@@ -1628,31 +1751,54 @@
               </a>
             </div>
           </div>
-          <h3>Drone Builder</h3>
-          <p>
-            A collaborative drone design and simulation platform that combines real-time 3D visualization with
-            deterministic validation of configurations and flight setups.
+          <h3>Gubbi</h3>
+          <p class="card-hook">Persistent memory for any LLM client, on any provider.</p>
+          <p class="card-support">
+            One context across sessions, devices, and providers. Self-hosted, so no data leaves your infrastructure.
           </p>
+          <p class="card-proof">Hybrid full-text and semantic search. Embeddings come from a local ONNX model on the
+            CPU.</p>
           <div class="tag-row">
-            <span class="tag">3D Visualization</span>
-            <span class="tag">Simulation</span>
-            <span class="tag">Drone Design</span>
+            <span class="tag">MCP</span>
+            <span class="tag">Python</span>
+            <span class="tag">Self-Hosted</span>
           </div>
         </article>
 
         <article class="build-card">
           <div class="project-head">
-            <div class="build-kicker">ML Research Project</div>
+            <div class="build-kicker">Robotics</div>
             <div class="project-links">
-              <a href="https://github.com/Tejaaswini/ExoRL_simulation" target="_blank" rel="noreferrer"
-                class="icon-link" title="GitHub" aria-label="ExoRL Simulation GitHub">
+              <a href="https://github.com/Tejaaswini/companion-health" target="_blank" rel="noreferrer"
+                class="icon-link" title="GitHub" aria-label="Companion Health GitHub">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                   <path
                     d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                 </svg>
               </a>
+            </div>
+          </div>
+          <h3>Companion Health</h3>
+          <p class="card-hook">A MAVLink health daemon for companion computers.</p>
+          <p class="card-support">
+            Reports hardware and service health under fault conditions over a custom message protocol.
+          </p>
+          <p class="card-proof">Emits a custom COMPANION_HEALTH MAVLink v2 message at 1 Hz: CPU, GPU, RAM, temperature,
+            disk, service status, watchdog resets.</p>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">MAVLink</span>
+          </div>
+        </article>
+
+        <article class="build-card">
+          <div class="project-head">
+            <div class="build-kicker">ML Research</div>
+            <div class="project-links">
               <a href="https://www.tejaaswini.com/final_report_tejaaswini_bijan.pdf" target="_blank" rel="noreferrer"
-                class="icon-link" title="View Report" aria-label="View Report">
+                class="icon-link"
+                title="Early Mission Degradation Detection in Multi-Agent Autonomous Systems report, PDF"
+                aria-label="Early Mission Degradation Detection in Multi-Agent Autonomous Systems report, PDF">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                   stroke-linecap="round" stroke-linejoin="round">
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
@@ -1664,193 +1810,200 @@
               </a>
             </div>
           </div>
-          <h3>Early Mission Degradation Detection in Multi-Agent Autonomous Systems</h3>
-          <p>
-            Built a multi-agent simulation for detecting early mission degradation before formal failure. Represented
-            each mission as a temporal graph, embedded it with Weisfeiler-Lehman Graph2Vec, and classified degraded runs
-            from mission prefixes — well before connectivity actually broke. Focused on environment modeling, feature
-            design, and experimental evaluation.
-            <br><br>
-            Advanced ML course, Fall '25 - Prof. Armin Mehrabian &amp; Sardar Hamidian
+          <h3>Early Mission Degradation Detection</h3>
+          <p class="card-hook">Detects degrading multi-agent missions before they formally fail.</p>
+          <p class="card-support">
+            Each mission is a temporal graph embedded with Graph2Vec. Degraded runs are classified from prefixes,
+            before connectivity breaks.
+          </p>
+          <p class="card-proof">32 x 32 grid, four agents, 500-step missions. Classified from the first 150 steps.</p>
+          <p class="card-note">Advanced ML course, Fall &rsquo;25 - Prof. Armin Mehrabian &amp; Sardar Hamidian
           </p>
           <div class="tag-row">
             <span class="tag">Multi-Agent Systems</span>
             <span class="tag">Graph Embeddings</span>
             <span class="tag">Simulation</span>
-            <span class="tag">Python</span>
           </div>
         </article>
 
-        <article class="build-card">
-          <div class="project-head">
-            <div class="build-kicker">System Monitoring</div>
-            <div class="project-links">
-              <a href="https://github.com/Tejaaswini/system-monitoring" target="_blank" rel="noreferrer"
-                class="icon-link" title="GitHub" aria-label="Sysmon GitHub">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                </svg>
-              </a>
-            </div>
-          </div>
-          <h3>Sysmon</h3>
-          <p>
-            A real-time system monitoring tool with a Go backend and D3.js-based frontend visualizations. It monitors
-            CPU, memory, disk, and network usage.
-          </p>
-          <div class="tag-row">
-            <span class="tag">Go</span>
-            <span class="tag">D3.js</span>
-            <span class="tag">Monitoring</span>
-          </div>
-        </article>
+      </div>
 
-        <article class="build-card">
-          <div class="project-head">
-            <div class="build-kicker">Encryption Toolkit</div>
-            <div class="project-links">
-              <a href="https://github.com/Tejaaswini/homomorphic-encryption" target="_blank" rel="noreferrer"
-                class="icon-link" title="GitHub" aria-label="Homomorphic Encryption Toolkit GitHub">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                </svg>
-              </a>
-            </div>
-          </div>
-          <h3>Homomorphic Encryption Toolkit</h3>
-          <p>
-            A toolkit built with C++ and Go to experiment with encrypted data operations for privacy-preserving
-            computation and research.
-          </p>
-          <div class="tag-row">
-            <span class="tag">C++</span>
-            <span class="tag">Go</span>
-            <span class="tag">Homomorphic Encryption</span>
-          </div>
-        </article>
+      <section class="trace" aria-labelledby="trace-title">
+        <div class="build-kicker">Flint in practice</div>
+        <h3 id="trace-title">A reconstructed Supabase/Cursor-style exfiltration</h3>
+        <p class="trace-intro">Every request below passes RBAC on its own. Flint follows the data across the session.
+        </p>
+        <ol class="trace-steps">
+          <li class="trace-step">
+            <div class="trace-head"><span class="trace-num">01</span><span class="trace-status">Flagged</span></div>
+            <code class="trace-call">support.read_ticket</code>
+            <p>The ticket body carries injected instructions to query API keys and post them back.</p>
+            <span class="tag trace-rule">tool_poisoning_indicator</span>
+          </li>
+          <li class="trace-step">
+            <div class="trace-head"><span class="trace-num">02</span><span class="trace-status">Flagged</span></div>
+            <code class="trace-call">db.execute_sql</code>
+            <p>The query returns two API keys into the session.</p>
+            <span class="tag trace-rule">credential_exposure</span>
+          </li>
+          <li class="trace-step trace-step-final">
+            <div class="trace-head"><span class="trace-num">03</span><span class="trace-status">Session terminated</span></div>
+            <code class="trace-call">support.post_reply</code>
+            <p>The reply contains both keys. Flint matches the exact tokens and terminates the session.</p>
+            <span class="tag trace-rule trace-rule-accent">secret_relay</span>
+          </li>
+        </ol>
+        <p class="trace-foot">From Flint&rsquo;s own regression corpus of 12 hand-written traces, where the role is
+          deliberately permissive.
+          <a href="https://github.com/Tejaaswini/flint/blob/main/corpus/supabase_cursor_exfil.json" target="_blank"
+            rel="noopener noreferrer" class="inline-link">View the trace</a>
+        </p>
+      </section>
 
-        <article class="build-card">
-          <div class="project-head">
-            <div class="build-kicker">Gesture Control Game</div>
-            <div class="project-links">
-              <a href="https://github.com/gladosLabs/lunar_lander_motion_gesture" target="_blank" rel="noreferrer"
-                class="icon-link" title="GitHub" aria-label="Lunar Lander Gesture Game GitHub">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                </svg>
-              </a>
-            </div>
-          </div>
-          <h3>Lunar Lander - Hand Gesture Controlled Game</h3>
-          <p>
-            Control the OpenAI Gym LunarLander-v2 environment using hand gestures detected from a webcam with MediaPipe
-            Hands and OpenCV.
-          </p>
-          <div class="tag-row">
-            <span class="tag">Python</span>
-            <span class="tag">OpenCV</span>
-            <span class="tag">MediaPipe</span>
-            <span class="tag">OpenAI Gym</span>
-          </div>
-        </article>
+      <div class="index-head">
+        <h3>Also built</h3>
+      </div>
 
+      <div class="index-list">
+        <div class="index-row">
+          <span class="index-num">01</span>
+          <span class="index-name">Vault Physician</span>
+          <span class="index-desc">Finds and fixes orphaned notes and tag sprawl in Obsidian</span>
+          <span class="index-tech">Obsidian &middot; AI</span>
+          <span class="index-links">
+            <a href="https://github.com/Tejaaswini/obsidian-plugin" target="_blank" rel="noreferrer" class="icon-link" title="GitHub" aria-label="Vault Physician on GitHub">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://medium.com/@tejnaren07/my-obsidian-vault-was-rotting-so-i-wrote-a-plugin-to-diagnose-it-a1343830fbbb" target="_blank" rel="noreferrer" class="icon-link" title="Medium article" aria-label="Vault Physician Medium article">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+            </a>
+            <a href="https://www.loom.com/share/158b521201b445da9b55c53e1df40f86" target="_blank" rel="noreferrer" class="icon-link" title="Demo video" aria-label="Vault Physician demo video">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" /></svg>
+            </a>
+          </span>
+        </div>
+
+        <div class="index-row">
+          <span class="index-num">02</span>
+          <span class="index-name">Drone Builder</span>
+          <span class="index-desc">Collaborative drone design with 3D visualization and deterministic config validation</span>
+          <span class="index-tech">3D &middot; Simulation</span>
+          <span class="index-links">
+            <a href="https://github.com/gladosLabs/drone_builder" target="_blank" rel="noreferrer" class="icon-link" title="GitHub" aria-label="Drone Builder on GitHub">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://drone-builder.vercel.app/" target="_blank" rel="noreferrer" class="icon-link" title="Live demo" aria-label="Drone Builder live demo">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="m12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </a>
+          </span>
+        </div>
+
+        <div class="index-row">
+          <span class="index-num">03</span>
+          <span class="index-name">Sysmon</span>
+          <span class="index-desc">CPU, memory, disk, and network monitor. Go backend, D3.js frontend</span>
+          <span class="index-tech">Go &middot; D3.js</span>
+          <span class="index-links">
+            <a href="https://github.com/Tejaaswini/system-monitoring" target="_blank" rel="noreferrer" class="icon-link" title="GitHub" aria-label="Sysmon on GitHub">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </span>
+        </div>
+
+        <div class="index-row">
+          <span class="index-num">04</span>
+          <span class="index-name">Homomorphic Encryption Toolkit</span>
+          <span class="index-desc">C++ and Go toolkit for computing on encrypted data</span>
+          <span class="index-tech">C++ &middot; Go</span>
+          <span class="index-links">
+            <a href="https://github.com/Tejaaswini/homomorphic-encryption" target="_blank" rel="noreferrer" class="icon-link" title="GitHub" aria-label="Homomorphic Encryption Toolkit on GitHub">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </span>
+        </div>
+
+        <div class="index-row">
+          <span class="index-num">05</span>
+          <span class="index-name">Gesture-Controlled Lunar Lander</span>
+          <span class="index-desc">Plays OpenAI Gym LunarLander-v2 with webcam hand gestures via MediaPipe</span>
+          <span class="index-tech">Python &middot; OpenCV &middot; MediaPipe</span>
+          <span class="index-links">
+            <a href="https://github.com/gladosLabs/lunar_lander_motion_gesture" target="_blank" rel="noreferrer" class="icon-link" title="GitHub" aria-label="Gesture-Controlled Lunar Lander on GitHub">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </span>
+        </div>
       </div>
     </section>
 
     <section id="research">
       <div class="section-head">
-        <div class="section-label">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-            class="hand-drawn-icon">
-            <path d="M9 2V6C9 7.1 9.9 8 11 8H13C14.1 8 15 7.1 15 6V2" stroke="var(--accent)" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M11 8V18C11 19.1 11.9 20 13 20H15C16.1 20 17 19.1 17 18V8" stroke="var(--accent)"
-              stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M15 20H17" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
-            <path d="M7 14L9 16" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
-            <path d="M7 18L9 20" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-          Research
-        </div>
-        <div>
-          <h2 class="section-title">My research sits at the intersection of autonomy, resilience, and security.</h2>
-          <p class="section-copy">
-            I’m especially interested in autonomous systems that have to keep working under latency, packet loss,
-            adversarial conditions, and real-world uncertainty and in the cryptographic systems that make trust
-            possible
-            in distributed environments.
-          </p>
-        </div>
+        <h2 class="section-title">Research</h2>
+        <p class="section-note">
+            At George Washington University I worked in <a href="https://sibin.github.io/" target="_blank"
+              rel="noopener noreferrer" class="inline-link">Prof. Sibin Mohan</a>&rsquo;s group on autonomous drones
+            and rovers under adversarial conditions, and owned the experimental systems side.
+        </p>
       </div>
 
-      <div class="grid-2">
-        <article class="research-card">
-          <div class="card-kicker">Autonomous Systems &amp; Robotics</div>
-          <h3>Low-latency autonomy under adversarial conditions</h3>
-          <p>
-            I work as a Research Engineer with <a href="https://sibin.github.io/" target="_blank"
-              rel="noopener noreferrer" style="text-decoration: underline;">Prof. Sibin Mohan</a>'s group at George
-            Washington University, focusing on autonomous drones and rovers. Within a collaborative research effort, I
-            own the experimental systems side — building and instrumenting the platforms, modifying flight-control
-            firmware, and running the fault-injection experiments that stress-test resilience under adversarial
-            conditions.
+      <div class="projects-grid">
+        <article class="build-card project-feature">
+          <div class="project-head">
+            <div class="build-kicker">Paper</div>
+            <div class="project-links">
+              <a href="https://arxiv.org/abs/2407.15003" target="_blank" rel="noreferrer" class="icon-link"
+                title="arXiv abstract" aria-label="Read the abstract on arXiv">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="m12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                  </path>
+                </svg>
+              </a>
+              <a href="https://arxiv.org/pdf/2407.15003" target="_blank" rel="noreferrer" class="icon-link"
+                title="PDF" aria-label="Download the paper as PDF">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14,2 14,8 20,8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10,9 9,9 8,9"></polyline>
+                </svg>
+              </a>
+              <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=fxnPoFQAAAAJ&amp;citation_for_view=fxnPoFQAAAAJ:u5HHmVD_uO8C"
+                target="_blank" rel="noreferrer" class="icon-link" title="Google Scholar"
+                aria-label="Citation on Google Scholar">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10 12 5 2 10l10 5 10-5z"></path>
+                  <path d="M6 12v5c0 1.1 2.7 2.5 6 2.5s6-1.4 6-2.5v-5"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="paper-title">Predictable by Design, Vulnerable by Nature: Security Consequences of Learnability
+            in UAV State Estimators</h3>
+          <p class="paper-meta">arXiv:2407.15003 &middot; 2024</p>
+          <p class="card-support">
+            A drone&rsquo;s state estimator can be learned from its input and output behaviour alone. REQUIEM builds a
+            surrogate of the Extended Kalman Filter, then spoofs sensors to push flights off course while evading
+            anomaly detection.
           </p>
-          <ul class="research-list">
-            <li>Real-time communication under packet loss and latency</li>
-            <li>Multi-agent coordination and telemetry</li>
-            <li>Security in adversarial environments</li>
-          </ul>
           <div class="tag-row">
-            <span class="tag">ROS</span>
-            <span class="tag">PX4</span>
-            <span class="tag">UDP Pipelines</span>
-            <span class="tag">Vicon</span>
-            <span class="tag">Jetson</span>
-            <span class="tag">Raspberry Pi</span>
+            <span class="tag">UAV Security</span>
+            <span class="tag">State Estimation</span>
+            <span class="tag">Adversarial ML</span>
           </div>
         </article>
 
-        <article class="research-card">
-          <div class="card-kicker">Current Focus</div>
-          <h3>Failure detection, protocol weakness, and mitigation</h3>
-          <p>
-            My current work looks at how autonomous systems degrade before failure becomes obvious - from memory-safety
-            issues in drone communication stacks to protocol-level weaknesses in onboard and ground-station interfaces,
-            and
-            real-time detection and mitigation of adversarial behavior.
-          </p>
-          <p>
-            The goal is to improve the safety, robustness, and reliability of autonomous systems operating in hostile or
-            unpredictable environments.
-          </p>
-        </article>
-
-        <article class="research-card">
-          <div class="card-kicker">Blockchain &amp; Cryptography</div>
-          <h3>Privacy-preserving and decentralized systems</h3>
-          <p>
-            I also have a research background in cryptography and decentralized systems, with a focus on
-            privacy-preserving technologies such as zero-knowledge proofs.
-          </p>
-          <ul class="research-list">
-            <li>Elliptic curve cryptography</li>
-            <li>Smart contract vulnerability analysis</li>
-            <li>Privacy-aware system design</li>
-          </ul>
-        </article>
-
-        <article class="research-card">
+        <article class="build-card">
           <div class="project-head">
-            <div class="card-kicker">Publications &amp; Talks</div>
+            <div class="build-kicker">Book &middot; Co-author</div>
             <div class="project-links">
               <a href="https://www.shroffpublishers.com/books/9789352138852/" target="_blank" rel="noreferrer"
-                class="icon-link" title="View Book" aria-label="Blockchain for Beginners Book">
+                class="icon-link" title="View book" aria-label="Blockchain for Beginners book">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                   stroke-linecap="round" stroke-linejoin="round">
                   <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
@@ -1859,125 +2012,218 @@
               </a>
             </div>
           </div>
-          <h3>Writing and teaching technical ideas clearly</h3>
-          <p>
-            I co-authored <em>Blockchain for Beginners: Art of Decentralization and Cryptography</em>, a foundational
-            text
-            on cryptographic primitives and decentralized systems.
+          <h3>Blockchain for Beginners: Art of Decentralization and Cryptography</h3>
+          <p class="paper-meta">Shroff Publishers</p>
+          <p class="card-support">
+            An introduction to cryptographic primitives and decentralized systems.
           </p>
-          <p>
-            I’ve also delivered talks and workshops on blockchain and cryptography at conferences and technical meetups.
-          </p>
+          <div class="tag-row">
+            <span class="tag">Cryptography</span>
+            <span class="tag">Blockchain</span>
+          </div>
         </article>
       </div>
     </section>
 
-    <section id="skills">
+    <section id="writing">
       <div class="section-head">
-        <div class="section-label">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-            class="hand-drawn-icon">
-            <path
-              d="M14.7 6.3C15.1 6.3 15.4 6 15.4 5.6V4.4C15.4 4 15.1 3.7 14.7 3.7C14.3 3.7 14 4 14 4.4V5.6C14 6 14.3 6.3 14.7 6.3Z"
-              stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M20 8H4C3.4 8 3 8.4 3 9V19C3 19.6 3.4 20 4 20H20C20.6 20 21 19.6 21 19V9C21 8.4 20.6 8 20 8Z"
-              stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M7 8V6C7 4.9 7.9 4 9 4H15C16.1 4 17 4.9 17 6V8" stroke="var(--accent)" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-          Skills
+        <h2 class="section-title">Writing</h2>
+      </div>
+
+      <div class="index-list writing-list">
+        <div class="index-row index-row-link">
+          <span class="index-name">
+            <a href="https://tejnaren07.medium.com/my-obsidian-vault-was-rotting-so-i-wrote-a-plugin-to-diagnose-it-a1343830fbbb"
+              target="_blank" rel="noopener noreferrer">My Obsidian vault was rotting. So I wrote a plugin to diagnose it.</a>
+          </span>
+          <span class="index-tech">2026</span>
         </div>
-        <div>
-          <h2 class="section-title">Strongest where systems meet software reality.</h2>
-          <!-- <p class="section-copy">
-            I care less about long tool lists and more about using the right tools to build systems that stay reliable, observable, and understandable under real constraints.
-          </p> -->
+        <div class="index-row index-row-link">
+          <span class="index-name">
+            <a href="https://tejnaren07.medium.com/mutexes-and-semaphores-in-autonomous-drones-and-rovers-the-key-to-smooth-collision-free-operation-b49985c75cb4"
+              target="_blank" rel="noopener noreferrer">Mutexes and Semaphores in Autonomous Drones and Rovers: The Key to Smooth, Collision-Free Operation</a>
+          </span>
+          <span class="index-tech">2024</span>
+        </div>
+        <div class="index-row index-row-link">
+          <span class="index-name">
+            <a href="https://tejnaren07.medium.com/decoding-cryptographic-security-gcd-agcd-and-lattice-attacks-e1a29d1a9da7"
+              target="_blank" rel="noopener noreferrer">Decoding Cryptographic Security: GCD, AGCD, and Lattice Attacks</a>
+          </span>
+          <span class="index-tech">2024</span>
+        </div>
+        <div class="index-row index-row-link">
+          <span class="index-name">
+            <a href="https://tejnaren07.medium.com/ecdsa-vs-rsa-what-and-why-e83c4c3b501a"
+              target="_blank" rel="noopener noreferrer">ECDSA vs RSA. What and why?</a>
+          </span>
+          <span class="index-tech">2021</span>
         </div>
       </div>
 
-      <div class="skills-columns">
-        <article class="skill-card">
-          <h3>Languages &amp; services</h3>
-          <ul>
-            <li>C++</li>
-            <li>Python</li>
-            <li>Go · SQL</li>
-            <li>FastAPI · Flask · Django · gRPC</li>
-            <li>PostgreSQL · MongoDB · MySQL · Redis</li>
-          </ul>
-          </ul>
+      <p class="writing-more">
+        <a href="https://tejnaren07.medium.com/" target="_blank" rel="noopener noreferrer" class="inline-link">All posts
+          on Medium</a>
+      </p>
+    </section>
+
+    <section id="experience">
+      <div class="section-head">
+        <h2 class="section-title">Experience</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="entry">
+          <div>
+            <div class="entry-time">Sep 2026 to present</div>
+            <div class="entry-place"><a href="https://joinbob.ai/" target="_blank" rel="noopener noreferrer" class="inline-link">BOB</a> &middot; Miami Beach, FL</div>
+          </div>
+          <div>
+            <h3>Founding Platform Engineer</h3>
+            <p>
+              AI infrastructure and security for LLM systems: reliability, resilience, low latency.
+            </p>
+          </div>
         </article>
 
-        <article class="skill-card">
-          <h3>Systems &amp; infrastructure</h3>
-          <ul>
-            <li>UDP and real-time networking</li>
-            <li>Docker · GCP · AWS</li>
-            <li>Kafka · RabbitMQ · Redis Streams</li>
-            <li>CI/CD · autoscaling · observability · SLOs</li>
-          </ul>
+        <article class="entry">
+          <div>
+            <div class="entry-time">Aug 2025 to Jan 2026</div>
+            <div class="entry-place"><a href="https://mundane.co/" target="_blank" rel="noopener noreferrer" class="inline-link">mundane</a> &middot; Palo Alto, CA</div>
+          </div>
+          <div>
+            <h3>Systems Software Engineer</h3>
+            <p>
+              Built a correctness-first teleoperation data plane in C++ for video and telemetry over unreliable
+              networks. Held sub-200ms tail latency under live bandwidth variability.
+            </p>
+            <ul>
+              <li>Packetization, sequencing, buffering, and failure handling for real-time streams.</li>
+              <li>End-to-end instrumentation for latency, jitter, and packet loss.</li>
+              <li>Ran the services on GCP with Docker. Owned observability, debugging, and production reliability.</li>
+            </ul>
+          </div>
         </article>
 
-        <article class="skill-card">
-          <h3>Robotics &amp; applied research</h3>
-          <ul>
-            <li>PX4 · MAVLink · Vicon · RealSense</li>
-            <li>ROS and autonomy pipelines</li>
-            <li>Multi-agent systems · real-time inference</li>
-            <li>Anomaly detection · RL · simulation</li>
-          </ul>
+        <article class="entry">
+          <div>
+            <div class="entry-time">Sep 2024 to Dec 2025</div>
+            <div class="entry-place">George Washington University &middot; Washington, D.C.</div>
+          </div>
+          <div>
+            <h3>R&amp;D Engineer</h3>
+            <p>
+              Built real-time, event-driven autonomy pipelines for drones and rovers: sensing, control, and fault
+              detection under strict latency and reliability constraints.
+            </p>
+            <ul>
+              <li>Modified PX4 flight-control software in C++: custom messaging, sensor integration, adversarial test
+                workflows.</li>
+              <li>Built sub-200ms sensor and coordination pipelines over UDP for anomaly detection and recovery.</li>
+              <li>Built simulation and replay tooling for fault injection and diagnosis. It surfaced integration bugs
+                that had blocked field testing.</li>
+            </ul>
+            <p>
+              The work sat in <a href="https://sibin.github.io/" target="_blank" rel="noopener noreferrer"
+                class="inline-link">Prof. Sibin Mohan</a>&rsquo;s group, where I owned the experimental systems side:
+              building and instrumenting the platforms, modifying flight-control firmware, and running the
+              fault-injection experiments. The group&rsquo;s focus was memory-safety issues in drone communication
+              stacks, protocol-level weaknesses in onboard and ground-station interfaces, and real-time detection and
+              mitigation of adversarial behavior.
+            </p>
+          </div>
         </article>
 
-        <article class="skill-card">
-          <h3>AI &amp; agent security</h3>
-          <ul>
-            <li>MCP session firewalls · agent sandboxing</li>
-            <li>RBAC for agents · scopes · per-argument policy</li>
-            <li>Protocol-level weakness analysis</li>
-            <li>Adversarial behavior detection &amp; mitigation</li>
-          </ul>
+        <article class="entry">
+          <div>
+            <div class="entry-time">Jan 2025 to May 2025</div>
+            <div class="entry-place">George Washington University &middot; Washington, D.C.</div>
+          </div>
+          <div>
+            <h3>Teaching Assistant</h3>
+            <p>
+              TA for a graduate and undergraduate autonomous systems course: controls, PID tuning, and autonomous
+              vehicle design, taught through hands-on rover builds.
+            </p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div>
+            <div class="entry-time">Jan 2022 to Jan 2024</div>
+            <div class="entry-place"><a href="https://www.gale.agency/" target="_blank" rel="noopener noreferrer" class="inline-link">Gale Partners</a> &middot; New York, NY</div>
+          </div>
+          <div>
+            <h3>Backend Developer</h3>
+            <p>
+              Built and fixed production backends for financial systems.
+            </p>
+            <ul>
+              <li>Fixed a systemic p95 latency regression in core banking APIs: 5s to under 1s.</li>
+              <li>Built event-driven transaction pipelines for millions of daily events, with failure handling and
+                reliable consumers.</li>
+              <li>Shipped shared middleware for auth, tracing, and rate limiting across six microservices.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div>
+            <div class="entry-time">Jan 2020 to Jan 2022</div>
+            <div class="entry-place">Follo Platforms &middot; Bengaluru, India</div>
+          </div>
+          <div>
+            <h3>Founding Engineer</h3>
+            <p>
+              Built the first product and platform, and made the core product and technical decisions.
+            </p>
+            <ul>
+              <li>Shipped customer-facing features every week for two years.</li>
+              <li>Built a real-time rules engine that routed alerts within 500ms, cutting missed critical incidents by
+                about 40%.</li>
+              <li>Sole infrastructure owner: autoscaling, monitoring, deployment, runbooks. 99.9% uptime.</li>
+            </ul>
+          </div>
         </article>
       </div>
     </section>
 
-    <section id="beyond">
+    <section id="about">
       <div class="section-head">
-        <div class="section-label">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-            class="hand-drawn-icon">
-            <path d="M18 8H19C20.1 8 21 8.9 21 10V12C21 13.1 20.1 14 19 14H18" stroke="var(--accent)" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M6 8H5C3.9 8 3 8.9 3 10V12C3 13.1 3.9 14 5 14H6" stroke="var(--accent)" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M6 14V18C6 19.1 6.9 20 8 20H16C17.1 20 18 19.1 18 18V14" stroke="var(--accent)" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M10 4V6" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
-            <path d="M14 4V6" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
-            <path d="M12 2C11.4 2 11 2.4 11 3V5C11 5.6 11.4 6 12 6C12.6 6 13 5.6 13 5V3C13 2.4 12.6 2 12 2Z"
-              stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-          Beyond work
-        </div>
-        <div>
-          <h2 class="section-title">A few things about me.</h2>
-          <p class="section-copy">
-            The work matters, but so do the things that shape how I think, what I notice, and what I end up obsessing
-            over.
-          </p>
-        </div>
+        <h2 class="section-title">Beyond work</h2>
       </div>
 
       <div class="notes-grid">
         <article class="note-card">
-          <div class="note-kicker">Curiosity</div>
-          <h3>Formula 1, systems, and engineering rabbit holes</h3>
+          <div class="card-top">
+            <div>
+              <div class="note-kicker">Outdoors</div>
+              <h3>Hikes and road trips</h3>
+            </div>
+
+            <button type="button" class="gallery-trigger" data-gallery="motion"
+              aria-label="Open gallery: hikes and road trips">
+              <div class="gallery-stack">
+                <img src="/images/motion/thumbs/valdez.jpg" alt="" loading="lazy" width="42" height="52" />
+                <img src="/images/motion/thumbs/diablo_lake.jpg" alt="" loading="lazy" width="42" height="52" />
+                <img src="/images/motion/thumbs/motion-1.jpg" alt="" loading="lazy" width="42" height="52" />
+              </div>
+            </button>
+          </div>
+
           <p>
-            I’m drawn to things that look elegant from a distance and get complicated up close - Formula 1, control
-            under
-            constraint, aircraft geometry, and the engineering decisions behind systems that somehow work as well as
-            they do.
+            I like long hikes and road trips. I also enjoy taking photos of people, nature, and anything that looks
+            beautiful to me.
+          </p>
+        </article>
+
+        <article class="note-card">
+          <div class="note-kicker">Racing</div>
+          <h3>Formula 1 and karting</h3>
+          <p>
+            I go karting and I follow Formula 1. I&rsquo;m drawn to things that look elegant from a distance and get
+            complicated up close: control under constraint, aircraft geometry, and the engineering decisions behind
+            systems that somehow work as well as they do.
           </p>
         </article>
 
@@ -2000,44 +2246,7 @@
           </div>
 
           <p>
-            I write poetry, and I’m learning Farsi. Language sharpens the same instincts I use in engineering:
-            structure, ambiguity, rhythm, and precision.
-          </p>
-        </article>
-
-        <article class="note-card">
-          <div class="card-top">
-            <div>
-              <div class="note-kicker">Thinking</div>
-              <h3>Best thinking happens in motion</h3>
-            </div>
-
-            <button type="button" class="gallery-trigger" data-gallery="motion"
-              aria-label="Open gallery for thinking in motion">
-              <div class="gallery-stack">
-                <img src="/images/motion/valdez.jpeg" alt="" />
-                <img src="/images/motion/virign_creek.jpeg" alt="" />
-                <img src="/images/motion/bird.jpeg" alt="" />
-                <img src="/images/motion/denali.jpeg" alt="" />
-                <img src="/images/motion/diablo_lake.jpeg" alt="" />
-                <img src="/images/motion/north_cascades.jpeg" alt="" />
-                <img src="/images/motion/san_bernardino.jpeg" alt="" />
-                <img src="/images/motion/motion-1.jpg" alt="" />
-                <img src="/images/motion/motion-2.jpg" alt="" />
-                <img src="/images/motion/motion-3.jpg" alt="" />
-                <img src="/images/motion/motion-4.jpg" alt="" />
-                <img src="/images/motion/motion-5.jpg" alt="" />
-                <img src="/images/motion/great_falls.jpeg" alt="" />
-                <img src="/images/motion/harpers_ferry.jpeg" alt="" />
-                <img src="/images/motion/sugarloaf_mountains_hike.jpeg" alt="" />
-                <img src="/images/motion/potomac_heritage_trail.jpeg" alt="" />
-              </div>
-            </button>
-          </div>
-
-          <p>
-            I like long hikes, road trips, and karting. Nature and speed usually help me untangle problems that refuse
-            to move at a desk.
+            I write poetry, and I&rsquo;m learning Farsi. Both make me pay attention to structure and precision.
           </p>
         </article>
 
@@ -2051,28 +2260,16 @@
             <button type="button" class="gallery-trigger" data-gallery="artwork"
               aria-label="Open gallery for digital art and sketching">
               <div class="gallery-stack">
-                <img src="/images/art/thumb-1.png" alt="" />
-                <img src="/images/art/thumb-2.png" alt="" />
-                <img src="/images/art/thumb-3.png" alt="" />
-                <img src="/images/art/thumb-4.png" alt="" />
+                <img src="/images/art/thumbs/thumb-1.jpg" alt="" loading="lazy" width="42" height="52" />
+                <img src="/images/art/thumbs/thumb-2.jpg" alt="" loading="lazy" width="42" height="52" />
+                <img src="/images/art/thumbs/thumb-3.jpg" alt="" loading="lazy" width="42" height="52" />
               </div>
             </button>
           </div>
 
           <p>
-            I sketch digitally when I want to think with my hands instead of code. It’s a different kind of
-            problem-solving -
-            slower, quieter, and a good reminder that not everything interesting needs to be optimized.
-          </p>
-        </article>
-
-        <article class="note-card">
-          <div class="note-kicker">Books</div>
-          <h3>Reading outside the screen</h3>
-          <p>
-            I like books that make me think differently about systems, people, and perception. Reading helps me step out
-            of the
-            immediacy of engineering and come back with better judgment.
+            I sketch digitally when I want to think with my hands instead of code. It is slower and quieter, and
+            nothing about it needs to be optimized.
           </p>
         </article>
       </div>
@@ -2089,14 +2286,12 @@
               <polyline points="22,6 12,13 2,6" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"
                 stroke-linejoin="round" />
             </svg>
-            I’m open to roles where the work is thoughtful, difficult, and real.
+            Get in touch
           </h2>
           <p>
-            Systems and AI security roles are the best fit. I’m especially interested in teams working on
-            AI safety and security, real-time systems,
-            resilient infrastructure, autonomy, observability, or software that has to operate under real constraints.
-            <br /><br />
-            If that sounds close to what you’re building, I’d be glad to talk.
+            I like talking to people working on AI safety and security, real-time systems, autonomy, resilient
+            infrastructure, or observability. If you want to collaborate on something in that range, email me. I like
+            systems that stay calm when things around them do not, including when the trouble comes from the AI.
           </p>
         </div>
 
@@ -2113,205 +2308,236 @@
             <span>GitHub</span>
             <span>tejaaswini</span>
           </a>
-          <a class="contact-link" href="https://medium.com/@tejnaren07" target="_blank" rel="noreferrer">
-            <span>Writing</span>
-            <span>@tejnaren07</span>
+          <a class="contact-link" href="https://scholar.google.com/citations?user=fxnPoFQAAAAJ&amp;hl=en"
+            target="_blank" rel="noreferrer">
+            <span>Google Scholar</span>
+            <span>Tejaaswini Narendran</span>
           </a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="wrap" style="margin-top: -30px; margin-bottom: 20px; text-align: center; font-size: 14px; color: var(--text-secondary);">
-    Box box box, it's time to connect! 🏎️ 
+  <footer class="wrap site-footer">
+    Box, box, box. It&rsquo;s time to connect! &#127950;&#65039;
   </footer>
-  <div class="media-modal" id="mediaModal" aria-hidden="true">
-    <div class="media-backdrop" data-close-modal></div>
 
-    <div class="media-dialog" role="dialog" aria-modal="true" aria-label="Media gallery">
-      <button class="media-close" id="mediaClose" aria-label="Close gallery">×</button>
+  <dialog class="media-modal" id="mediaModal" aria-label="Media gallery">
+    <div class="media-dialog">
+      <button type="button" class="media-close" id="mediaClose" aria-label="Close gallery">&times;</button>
 
       <div class="media-stage" id="mediaStage"></div>
 
       <div class="media-controls">
-        <button class="media-nav" id="mediaPrev" aria-label="Previous">←</button>
+        <button type="button" class="media-nav" id="mediaPrev" aria-label="Previous">&larr;</button>
         <div class="media-meta" id="mediaMeta"></div>
-        <button class="media-nav" id="mediaNext" aria-label="Next">→</button>
+        <button type="button" class="media-nav" id="mediaNext" aria-label="Next" autofocus>&rarr;</button>
       </div>
 
       <div class="media-thumbs" id="mediaThumbs"></div>
     </div>
-  </div>
-</body>
+  </dialog>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const galleries = {
-      artwork: [
-        { type: "image", src: "/images/art/thumb-1.png", thumb: "/images/art/thumb-1.png", alt: "Digital artwork 1" },
-        { type: "image", src: "/images/art/thumb-2.png", thumb: "/images/art/thumb-2.png", alt: "Digital artwork 2" },
-        { type: "image", src: "/images/art/thumb-3.png", thumb: "/images/art/thumb-3.png", alt: "Digital artwork 3" },
-        { type: "image", src: "/images/art/thumb-4.png", thumb: "/images/art/thumb-4.png", alt: "Digital artwork 4" }
-      ],
-      books: [
-        { type: "image", src: "/images/books/book-1.jpg", thumb: "/images/books/book-1.jpg", alt: "Book note 1" },
-        { type: "image", src: "/images/books/book-2.jpg", thumb: "/images/books/book-2.jpg", alt: "Book note 2" },
-        { type: "image", src: "/images/books/book-3.jpg", thumb: "/images/books/book-3.jpg", alt: "Book note 3" }
-      ],
-      motion: [
-        { type: "image", src: "/images/motion/valdez.jpeg", thumb: "/images/motion/valdez.jpeg", location: "Valdez, Alaska" },
-        { type: "image", src: "/images/motion/virign_creek.jpeg", thumb: "/images/motion/virign_creek.jpeg", location: "Virgin Creek Hike, Alaska" },
-        { type: "image", src: "/images/motion/bird.jpeg", thumb: "/images/motion/bird.jpeg", location: "A Bird in Action" },
-        { type: "image", src: "/images/motion/denali.jpeg", thumb: "/images/motion/denali.jpeg", location: "Denali Hike, Alaska" },
-        { type: "image", src: "/images/motion/diablo_lake.jpeg", thumb: "/images/motion/diablo_lake.jpeg", location: "Diablo Lake, Washington" },
-        { type: "image", src: "/images/motion/north_cascades.jpeg", thumb: "/images/motion/north_cascades.jpeg", location: "North Cascades, Washington" },
-        { type: "image", src: "/images/motion/san_bernardino.jpeg", thumb: "/images/motion/san_bernardino.jpeg", location: "San Bernardino, California" },
-        { type: "image", src: "/images/motion/motion-1.jpg", thumb: "/images/motion/motion-1.jpg", location: "Hoover Dam, Nevada" },
-        { type: "image", src: "/images/motion/motion-2.jpg", thumb: "/images/motion/motion-2.jpg", location: "Goblin Valley State Park, Utah" },
-        { type: "image", src: "/images/motion/motion-3.jpg", thumb: "/images/motion/motion-3.jpg", location: "Mt Shasta, California" },
-        { type: "image", src: "/images/motion/motion-4.jpg", thumb: "/images/motion/motion-4.jpg", location: "Star Gazing at Utah" },
-        { type: "image", src: "/images/motion/motion-5.jpg", thumb: "/images/motion/motion-5.jpg", location: "Sunset Drive" },
-        { type: "image", src: "/images/motion/great_falls.jpeg", thumb: "/images/motion/great_falls.jpeg", location: "Great Falls, Virginia" },
-        { type: "image", src: "/images/motion/harpers_ferry.jpeg", thumb: "/images/motion/harpers_ferry.jpeg", location: "Harpers Ferry, West Virginia" },
-        { type: "image", src: "/images/motion/sugarloaf_mountains_hike.jpeg", thumb: "/images/motion/sugarloaf_mountains_hike.jpeg", location: "Sugarloaf Mountains, Maryland" },
-        { type: "image", src: "/images/motion/potomac_heritage_trail.jpeg", thumb: "/images/motion/potomac_heritage_trail.jpeg", location: "Potomac Heritage Trail, Washington DC" }
-      ]
-    };
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const THEME_COLORS = { dark: "#0c0b09", light: "#f6f0e7" };
+      const themeToggle = document.getElementById("themeToggle");
+      const themeColorMeta = document.getElementById("themeColorMeta");
 
-    const modal = document.getElementById("mediaModal");
-    const stage = document.getElementById("mediaStage");
-    const thumbs = document.getElementById("mediaThumbs");
-    const meta = document.getElementById("mediaMeta");
-    const prevBtn = document.getElementById("mediaPrev");
-    const nextBtn = document.getElementById("mediaNext");
-    const closeBtn = document.getElementById("mediaClose");
-
-    if (!modal || !stage || !thumbs || !meta || !prevBtn || !nextBtn || !closeBtn) {
-      console.error("Gallery modal elements not found");
-      return;
-    }
-
-    let currentGalleryKey = null;
-    let currentIndex = 0;
-
-    function pauseVideos() {
-      stage.querySelectorAll("video").forEach(v => {
-        v.pause();
-        v.currentTime = 0;
-      });
-    }
-
-    function renderSlide() {
-      const items = galleries[currentGalleryKey];
-      if (!items || !items.length) return;
-
-      const item = items[currentIndex];
-      if (!item) return;
-
-      pauseVideos();
-      stage.innerHTML = "";
-
-      let el;
-      if (item.type === "video") {
-        el = document.createElement("video");
-        el.src = item.src;
-        el.controls = true;
-        el.playsInline = true;
-        el.autoplay = true;
-      } else {
-        el = document.createElement("img");
-        el.src = item.src;
-        el.alt = item.alt || "";
-        el.loading = "eager";
+      function applyTheme(theme) {
+        document.documentElement.setAttribute("data-theme", theme);
+        if (themeColorMeta) themeColorMeta.setAttribute("content", THEME_COLORS[theme]);
+        if (themeToggle) {
+          themeToggle.setAttribute(
+            "aria-label",
+            theme === "light" ? "Switch to dark theme" : "Switch to light theme"
+          );
+        }
       }
 
-      stage.appendChild(el);
-
-      if (item.location) {
-        const loc = document.createElement("div");
-        loc.className = "media-location";
-        loc.textContent = `📍 ${item.location}`;
-        stage.appendChild(loc);
-      }
-
-      meta.textContent = `${currentIndex + 1} / ${items.length}`;
-
-      thumbs.innerHTML = "";
-      items.forEach((thumbItem, index) => {
-        const btn = document.createElement("button");
-        btn.type = "button";
-        btn.className = "media-thumb" + (index === currentIndex ? " active" : "");
-        btn.setAttribute("aria-label", `Open media ${index + 1}`);
-
-        const thumbEl = document.createElement("img");
-        thumbEl.src = thumbItem.thumb || thumbItem.src;
-        thumbEl.alt = "";
-
-        btn.appendChild(thumbEl);
-        btn.addEventListener("click", () => {
-          currentIndex = index;
-          renderSlide();
+      if (themeToggle) {
+        applyTheme(document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark");
+        themeToggle.addEventListener("click", () => {
+          const next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+          applyTheme(next);
+          try {
+            localStorage.setItem("theme", next);
+          } catch (e) {
+            /* storage unavailable: the choice just will not persist */
+          }
         });
+      }
 
-        thumbs.appendChild(btn);
-      });
-    }
+      const galleries = {
+        artwork: [
+          { src: "/images/art/thumb-1.png", thumb: "/images/art/thumbs/thumb-1.jpg", alt: "Digital artwork 1" },
+          { src: "/images/art/thumb-2.png", thumb: "/images/art/thumbs/thumb-2.jpg", alt: "Digital artwork 2" },
+          { src: "/images/art/thumb-3.png", thumb: "/images/art/thumbs/thumb-3.jpg", alt: "Digital artwork 3" },
+          { src: "/images/art/thumb-4.png", thumb: "/images/art/thumbs/thumb-4.jpg", alt: "Digital artwork 4" }
+        ],
+        motion: [
+          { src: "/images/motion/valdez.jpeg", thumb: "/images/motion/thumbs/valdez.jpg", location: "Valdez, Alaska" },
+          { src: "/images/motion/virign_creek.jpeg", thumb: "/images/motion/thumbs/virign_creek.jpg", location: "Virgin Creek Hike, Alaska" },
+          { src: "/images/motion/bird.jpeg", thumb: "/images/motion/thumbs/bird.jpg", location: "A Bird in Action" },
+          { src: "/images/motion/denali.jpeg", thumb: "/images/motion/thumbs/denali.jpg", location: "Denali Hike, Alaska" },
+          { src: "/images/motion/diablo_lake.jpeg", thumb: "/images/motion/thumbs/diablo_lake.jpg", location: "Diablo Lake, Washington" },
+          { src: "/images/motion/north_cascades.jpeg", thumb: "/images/motion/thumbs/north_cascades.jpg", location: "North Cascades, Washington" },
+          { src: "/images/motion/san_bernardino.jpeg", thumb: "/images/motion/thumbs/san_bernardino.jpg", location: "San Bernardino, California" },
+          { src: "/images/motion/motion-1.jpg", thumb: "/images/motion/thumbs/motion-1.jpg", location: "Hoover Dam, Nevada" },
+          { src: "/images/motion/motion-2.jpg", thumb: "/images/motion/thumbs/motion-2.jpg", location: "Goblin Valley State Park, Utah" },
+          { src: "/images/motion/motion-3.jpg", thumb: "/images/motion/thumbs/motion-3.jpg", location: "Mt Shasta, California" },
+          { src: "/images/motion/motion-4.jpg", thumb: "/images/motion/thumbs/motion-4.jpg", location: "Star Gazing at Utah" },
+          { src: "/images/motion/motion-5.jpg", thumb: "/images/motion/thumbs/motion-5.jpg", location: "Sunset Drive" },
+          { src: "/images/motion/great_falls.jpeg", thumb: "/images/motion/thumbs/great_falls.jpg", location: "Great Falls, Virginia" },
+          { src: "/images/motion/harpers_ferry.jpeg", thumb: "/images/motion/thumbs/harpers_ferry.jpg", location: "Harpers Ferry, West Virginia" },
+          { src: "/images/motion/sugarloaf_mountains_hike.jpeg", thumb: "/images/motion/thumbs/sugarloaf_mountains_hike.jpg", location: "Sugarloaf Mountains, Maryland" },
+          { src: "/images/motion/potomac_heritage_trail.jpeg", thumb: "/images/motion/thumbs/potomac_heritage_trail.jpg", location: "Potomac Heritage Trail, Washington DC" }
+        ]
+      };
 
-    function openGallery(key) {
-      if (!galleries[key]) {
-        console.error("No gallery found for key:", key);
+      const modal = document.getElementById("mediaModal");
+      const stage = document.getElementById("mediaStage");
+      const thumbs = document.getElementById("mediaThumbs");
+      const meta = document.getElementById("mediaMeta");
+      const prevBtn = document.getElementById("mediaPrev");
+      const nextBtn = document.getElementById("mediaNext");
+      const closeBtn = document.getElementById("mediaClose");
+
+      if (!modal || !stage || !thumbs || !meta || !prevBtn || !nextBtn || !closeBtn) {
+        console.error("Gallery modal elements not found");
         return;
       }
-      currentGalleryKey = key;
-      currentIndex = 0;
-      modal.classList.add("open");
-      modal.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
-      renderSlide();
-    }
 
-    function closeGallery() {
-      pauseVideos();
-      modal.classList.remove("open");
-      modal.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
-    }
+      let currentGalleryKey = null;
+      let currentIndex = 0;
+      let lastTrigger = null;
 
-    function showNext() {
-      const items = galleries[currentGalleryKey];
-      if (!items) return;
-      currentIndex = (currentIndex + 1) % items.length;
-      renderSlide();
-    }
+      function renderSlide() {
+        const items = galleries[currentGalleryKey];
+        if (!items || !items.length) return;
 
-    function showPrev() {
-      const items = galleries[currentGalleryKey];
-      if (!items) return;
-      currentIndex = (currentIndex - 1 + items.length) % items.length;
-      renderSlide();
-    }
+        const item = items[currentIndex];
+        if (!item) return;
 
-    document.querySelectorAll(".gallery-trigger").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const key = btn.dataset.gallery;
-        openGallery(key);
+        stage.innerHTML = "";
+
+        const img = document.createElement("img");
+        img.src = item.src;
+        img.alt = item.alt || "";
+        img.loading = "eager";
+        stage.appendChild(img);
+
+        if (item.location) {
+          const loc = document.createElement("div");
+          loc.className = "media-location";
+          loc.textContent = "\uD83D\uDCCD " + item.location;
+          stage.appendChild(loc);
+        }
+
+        meta.textContent = (currentIndex + 1) + " / " + items.length;
+
+        thumbs.innerHTML = "";
+        items.forEach((thumbItem, index) => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "media-thumb" + (index === currentIndex ? " active" : "");
+          btn.setAttribute("aria-label", "Open media " + (index + 1));
+
+          const thumbEl = document.createElement("img");
+          thumbEl.src = thumbItem.thumb;
+          thumbEl.alt = "";
+          thumbEl.loading = "lazy";
+
+          btn.appendChild(thumbEl);
+          btn.addEventListener("click", () => {
+            currentIndex = index;
+            renderSlide();
+            const active = thumbs.querySelector(".media-thumb.active");
+            if (active) active.focus();
+          });
+
+          thumbs.appendChild(btn);
+        });
+
+        const active = thumbs.querySelector(".media-thumb.active");
+        if (active) active.scrollIntoView({ block: "nearest", inline: "nearest" });
+      }
+
+      function openGallery(key, trigger) {
+        if (!galleries[key]) {
+          console.error("No gallery found for key:", key);
+          return;
+        }
+        currentGalleryKey = key;
+        currentIndex = 0;
+        lastTrigger = trigger || null;
+        renderSlide();
+        modal.showModal();
+        document.body.style.overflow = "hidden";
+      }
+
+      function showNext() {
+        const items = galleries[currentGalleryKey];
+        if (!items) return;
+        currentIndex = (currentIndex + 1) % items.length;
+        renderSlide();
+      }
+
+      function showPrev() {
+        const items = galleries[currentGalleryKey];
+        if (!items) return;
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        renderSlide();
+      }
+
+      document.querySelectorAll(".gallery-trigger").forEach(btn => {
+        btn.addEventListener("click", () => openGallery(btn.dataset.gallery, btn));
+      });
+
+      // idempotent, so every close path can call it without coordinating
+      function restoreAfterClose() {
+        document.body.style.overflow = "";
+        stage.innerHTML = "";
+        if (lastTrigger) {
+          lastTrigger.focus();
+          lastTrigger = null;
+        }
+      }
+
+      function closeGallery() {
+        if (modal.open) modal.close();
+        restoreAfterClose();
+      }
+
+      prevBtn.addEventListener("click", showPrev);
+      nextBtn.addEventListener("click", showNext);
+      closeBtn.addEventListener("click", closeGallery);
+
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeGallery();
+      });
+
+      // Escape goes through the browser's own close request
+      modal.addEventListener("cancel", () => {
+        setTimeout(restoreAfterClose, 0);
+      });
+
+      modal.addEventListener("close", restoreAfterClose);
+
+      // bound to the document: re-rendering the thumb strip can move focus out of the dialog
+      document.addEventListener("keydown", (e) => {
+        if (!modal.open) return;
+        if (e.key === "ArrowRight") {
+          e.preventDefault();
+          showNext();
+        }
+        if (e.key === "ArrowLeft") {
+          e.preventDefault();
+          showPrev();
+        }
       });
     });
+  </script>
+</body>
 
-    prevBtn.addEventListener("click", showPrev);
-    nextBtn.addEventListener("click", showNext);
-    closeBtn.addEventListener("click", closeGallery);
-
-    modal.addEventListener("click", (e) => {
-      if (e.target.hasAttribute("data-close-modal")) closeGallery();
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (!modal.classList.contains("open")) return;
-      if (e.key === "Escape") closeGallery();
-      if (e.key === "ArrowRight") showNext();
-      if (e.key === "ArrowLeft") showPrev();
-    });
-  });
-</script>
 </html>
