@@ -120,8 +120,8 @@
       /* depth */
       --shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
       --shadow-card: 0 8px 28px rgba(0, 0, 0, 0.28);
-      --shadow-badge: 0 18px 40px rgba(0, 0, 0, 0.5);
-      --shadow-photo: 0 6px 18px rgba(0, 0, 0, 0.45);
+      --shadow-badge: 0 2px 4px rgba(0, 0, 0, 0.5), 0 16px 30px rgba(0, 0, 0, 0.55), 0 44px 80px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+      --shadow-photo: 0 2px 5px rgba(0, 0, 0, 0.5), 0 12px 26px rgba(0, 0, 0, 0.6);
       --shadow-stack: 0 5px 14px rgba(0, 0, 0, 0.4);
       --shadow-modal: 0 24px 80px rgba(0, 0, 0, 0.65);
       --shadow-lanyard: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -199,8 +199,8 @@
 
       --shadow: 0 14px 40px rgba(28, 20, 11, 0.06);
       --shadow-card: 0 8px 28px rgba(28, 20, 11, 0.03);
-      --shadow-badge: 0 18px 40px rgba(28, 20, 11, 0.12), 0 2px 0 rgba(15, 107, 79, 0.08) inset;
-      --shadow-photo: 0 6px 18px rgba(28, 20, 11, 0.12);
+      --shadow-badge: 0 2px 4px rgba(28, 20, 11, 0.08), 0 16px 30px rgba(28, 20, 11, 0.14), 0 44px 80px rgba(28, 20, 11, 0.16), 0 2px 0 rgba(15, 107, 79, 0.08) inset;
+      --shadow-photo: 0 2px 5px rgba(28, 20, 11, 0.12), 0 12px 26px rgba(28, 20, 11, 0.2);
       --shadow-stack: 0 5px 14px rgba(0, 0, 0, 0.06);
       --shadow-modal: 0 24px 80px rgba(0, 0, 0, 0.22);
       --shadow-lanyard: 0 2px 4px rgba(28, 20, 11, 0.15);
@@ -495,11 +495,23 @@
       width: 100%;
       max-width: 280px;
       justify-self: center;
-      padding: 14px 14px 20px;
+      padding: 14px;
       border-radius: var(--radius-md);
       background: linear-gradient(180deg, var(--badge-grad-1), var(--badge-grad-2));
       border: 1px solid var(--line);
       box-shadow: var(--shadow-badge);
+      transform-origin: 50% -34px;
+      animation: badge-swing 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes badge-swing {
+      from {
+        transform: rotate(-2.5deg);
+      }
+
+      to {
+        transform: rotate(2.5deg);
+      }
     }
 
     .profile-card::before {
@@ -543,44 +555,6 @@
       border: 1px solid var(--line);
       filter: saturate(0.94) contrast(1.02);
       box-shadow: var(--shadow-photo);
-    }
-
-    .profile-caption {
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px dashed var(--accent-dashed);
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: end;
-      gap: 4px 10px;
-    }
-
-    .profile-caption .field-label {
-      grid-column: 1 / -1;
-      font-family: var(--mono);
-      font-size: 9px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .profile-caption .name {
-      font-family: var(--serif);
-      font-size: 30px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: var(--text);
-      line-height: 1;
-    }
-
-    .profile-caption .role {
-      grid-column: 1 / -1;
-      margin-top: 8px;
-      font-family: var(--mono);
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--accent);
     }
 
     main {
@@ -1571,7 +1545,8 @@
         scroll-behavior: auto;
       }
 
-      .dot {
+      .dot,
+      .profile-card {
         animation: none;
       }
 
@@ -1663,11 +1638,6 @@
 
           <div class="profile-photo-frame">
             <img src="/tj.jpeg" alt="Tejaaswini Narendran" class="profile-photo" width="1024" height="1536" />
-          </div>
-          <div class="profile-caption">
-            <span class="field-label">Name</span>
-            <span class="name">TJ</span>
-            <span class="role">Systems Engineer &middot; AI Security</span>
           </div>
         </aside>
       </div>
