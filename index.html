@@ -8,7 +8,7 @@
   <title>Tejaaswini Narendran - Systems Engineer</title>
 
   <meta name="description"
-    content="Systems engineer in Seattle. Founding Platform Engineer at BOB, working on AI infrastructure and security. Previously real-time systems and robotics." />
+    content="Systems engineer in Seattle. Founding Platform Engineer at BOB, working on LLM infrastructure and low-latency systems. Previously robotics teleoperation and UAV security research." />
   <meta name="author" content="Tejaaswini Narendran" />
 
   <link rel="canonical" href="https://www.tejaaswini.com/" />
@@ -16,7 +16,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Tejaaswini Narendran" />
   <meta property="og:description"
-    content="Systems engineer working on AI security, real-time systems, robotics, and resilient infrastructure." />
+    content="Systems engineer working on LLM infrastructure, low-latency systems, robotics, and AI security." />
   <meta property="og:url" content="https://www.tejaaswini.com/" />
   <meta property="og:site_name" content="Tejaaswini Narendran" />
   <meta property="og:image" content="https://www.tejaaswini.com/og.png" />
@@ -1617,11 +1617,12 @@
           <p class="hello">Namaste &#128591;,</p>
           <h1>I&rsquo;m TJ</h1>
           <p class="lead">
-            I build systems that have to <strong>stay correct under bad conditions</strong>: teleoperation over spotty
-            LTE, PX4 flight software under fault injection, banking pipelines handling millions of events a day.
+            I build LLM infrastructure and low-latency systems that have to <strong>stay correct under bad
+              conditions</strong>: agent tool calls failing in production, teleoperation over unreliable networks, PX4
+            flight software under fault injection.
           </p>
           <p class="intro">
-            I&rsquo;m a founding platform engineer at <a href="https://joinbob.ai/" target="_blank" rel="noopener noreferrer" class="inline-link">BOB</a>, working on AI infrastructure and security.
+            I&rsquo;m a founding platform engineer at <a href="https://joinbob.ai/" target="_blank" rel="noopener noreferrer" class="inline-link">BOB</a>, working on LLM infrastructure. Before that I worked on robotics teleoperation and UAV security research, and I build AI security tools on the side.
           </p>
 
           <div class="cta-row">
@@ -1955,7 +1956,7 @@
           </div>
           <h3 class="paper-title">Predictable by Design, Vulnerable by Nature: Security Consequences of Learnability
             in UAV State Estimators</h3>
-          <p class="paper-meta">arXiv:2407.15003 &middot; 2024</p>
+          <p class="paper-meta">Second author &middot; Under review at DSN 2027 &middot; arXiv:2407.15003</p>
           <p class="card-support">
             A drone&rsquo;s state estimator can be learned from its input and output behaviour alone. REQUIEM builds a
             surrogate of the Extended Kalman Filter, then spoofs sensors to push flights off course while evading
@@ -2051,47 +2052,65 @@
           <div>
             <h3>Founding Platform Engineer</h3>
             <p>
-              AI infrastructure and security for LLM systems: reliability, resilience, low latency.
-            </p>
-          </div>
-        </article>
-
-        <article class="entry">
-          <div>
-            <div class="entry-time">Aug 2025 to Jan 2026</div>
-            <div class="entry-place"><a href="https://mundane.co/" target="_blank" rel="noopener noreferrer" class="inline-link">mundane</a> &middot; Palo Alto, CA</div>
-          </div>
-          <div>
-            <h3>Systems Software Engineer</h3>
-            <p>
-              Built a correctness-first teleoperation data plane in C++ for video and telemetry over unreliable
-              networks. Held sub-200ms tail latency under live bandwidth variability.
+              Platform work on a Go-based AI finance agent that reads and edits customers&rsquo; books through QuickBooks and bank connections.
             </p>
             <ul>
-              <li>Packetization, sequencing, buffering, and failure handling for real-time streams.</li>
-              <li>End-to-end instrumentation for latency, jitter, and packet loss.</li>
-              <li>Ran the services on GCP with Docker. Owned observability, debugging, and production reliability.</li>
+              <li>Deployed self-hosted Langfuse tracing and alerting across every tool call, then consolidated tool descriptions and added a caching layer. Latency fell 60% and the tool-call failure rate went from 80% to 20%.</li>
+              <li>Built a self-healing loop: an agent reviews production failures, writes the fix, and opens a PR. Security-sensitive and architectural changes go to an engineer.</li>
+              <li>Moved document ingestion and email processing to open-weight models on Bedrock, cutting cost per user from $45 to about $12.</li>
             </ul>
           </div>
         </article>
 
         <article class="entry">
           <div>
-            <div class="entry-time">Sep 2024 to Dec 2025</div>
+            <div class="entry-time">Mar 2026 to May 2026</div>
+            <div class="entry-place">Stealth startup &middot; Santa Clara, CA</div>
+          </div>
+          <div>
+            <h3>Sr. Software Engineer</h3>
+            <p>
+              Built the founding MVP of a platform that creates digital twins of real consumers, so brands can test products and ads on a simulated panel of 250.
+            </p>
+            <ul>
+              <li>Owned the A/B ad-research engine end to end, reducing repeated and incoherent questions by 40%.</li>
+              <li>Moved inference from hosted frontier models to self-hosted Qwen and DeepSeek on Ollama. Cost per interview fell 60%, from about $25 to under $10, with lower latency.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div>
+            <div class="entry-time">Sep 2025 to Jan 2026</div>
+            <div class="entry-place"><a href="https://mundane.co/" target="_blank" rel="noopener noreferrer" class="inline-link">mundane</a> &middot; Palo Alto, CA</div>
+          </div>
+          <div>
+            <h3>Systems Software Engineer</h3>
+            <p>
+              Owned the networking and systems layer of a robotics teleoperation platform, where operators in VR headsets pilot remote robots: 30+ ROS2 topics, operator commands, and dual stereo video.
+            </p>
+            <ul>
+              <li>Built the data plane in C++ over raw UDP with custom packetization, sequencing, bounded buffering, and loss recovery. Held p99 latency under 200ms on unreliable networks.</li>
+              <li>When control commands began lagging, profiled with perf and Valgrind, traced it to high-rate video saturating a shared reorder buffer, and cut p99 latency 40%.</li>
+              <li>Added Prometheus, Grafana, and OpenTelemetry, and ran 4 containerized services on Kubernetes in GCP at 99.95% uptime.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div>
+            <div class="entry-time">Oct 2024 to Dec 2025</div>
             <div class="entry-place">George Washington University &middot; Washington, D.C.</div>
           </div>
           <div>
             <h3>R&amp;D Engineer</h3>
             <p>
-              Built real-time, event-driven autonomy pipelines for drones and rovers: sensing, control, and fault
-              detection under strict latency and reliability constraints.
+              Built the experimental platform behind Requiem, a UAV security paper with UIUC and Boeing Research that tests whether a drone can be hijacked through sensor data alone.
             </p>
             <ul>
-              <li>Modified PX4 flight-control software in C++: custom messaging, sensor integration, adversarial test
-                workflows.</li>
-              <li>Built sub-200ms sensor and coordination pipelines over UDP for anomaly detection and recovery.</li>
-              <li>Built simulation and replay tooling for fault injection and diagnosis. It surfaced integration bugs
-                that had blocked field testing.</li>
+              <li>Built a quadrotor with PX4 firmware modified in C++ and a fault-injection framework that cut fault detection time by over 60%.</li>
+              <li>Built pipelines streaming 1,000+ events/sec from Vicon and Intel RealSense over UDP at under 200ms latency, giving live ground truth for every flight.</li>
+              <li>Deployed PyTorch anomaly detection on live PX4 telemetry at 93% F1 across attack types.</li>
             </ul>
             <p>
               The work sat in <a href="https://sibin.github.io/" target="_blank" rel="noopener noreferrer"
@@ -2126,13 +2145,11 @@
           <div>
             <h3>Backend Developer</h3>
             <p>
-              Built and fixed production backends for financial systems.
+              Owned the backend of Bank of Montreal&rsquo;s equity research platform, growing from sole developer to leading a team of 5. It served analyst reports, stock recommendations, and P&amp;L data to tens of thousands of users.
             </p>
             <ul>
-              <li>Fixed a systemic p95 latency regression in core banking APIs: 5s to under 1s.</li>
-              <li>Built event-driven transaction pipelines for millions of daily events, with failure handling and
-                reliable consumers.</li>
-              <li>Shipped shared middleware for auth, tracing, and rate limiting across six microservices.</li>
+              <li>Cut p95 load time on the heaviest pages from 5 seconds to under 1 by modularizing the legacy codebase and fixing database indexing. A Memcache to Redis migration alone sped up API requests 62%.</li>
+              <li>Rebuilt a slow, lossy ETL pipeline ingesting stock and trading data from BMO&rsquo;s APIs, restructuring and indexing the data to stop dropped records.</li>
             </ul>
           </div>
         </article>
@@ -2143,15 +2160,14 @@
             <div class="entry-place">Follo Platforms &middot; Bengaluru, India</div>
           </div>
           <div>
-            <h3>Founding Engineer</h3>
+            <h3>Platform Engineer</h3>
             <p>
-              Built the first product and platform, and made the core product and technical decisions.
+              First engineering hire on a white-labeled remote care platform for 25+ COVID-era hospitals, where post-surgery patients checked in from home.
             </p>
             <ul>
-              <li>Shipped customer-facing features every week for two years.</li>
-              <li>Built a real-time rules engine that routed alerts within 500ms, cutting missed critical incidents by
-                about 40%.</li>
-              <li>Sole infrastructure owner: autoscaling, monitoring, deployment, runbooks. 99.9% uptime.</li>
+              <li>Designed all 8 backend services and a RabbitMQ event pipeline carrying chat, alerts, and payments at 10K+ events/sec at peak.</li>
+              <li>When growth overflowed the queues, redesigned for backpressure with autoscaling, dead-letter queues, and rate limiting. Cut API latency 38% and held 99.9% uptime for 2 years as sole infrastructure owner on GCP under HIPAA.</li>
+              <li>Built a clinical decision engine with physicians to choose patient follow-up questions. A feedback loop trained on patient answers and caregiver flags cut irrelevant questions by about 30% in 3 months.</li>
             </ul>
           </div>
         </article>
