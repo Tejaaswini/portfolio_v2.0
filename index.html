@@ -2052,10 +2052,11 @@
           <div>
             <h3>Founding Platform Engineer</h3>
             <p>
-              Platform work on a Go-based AI finance agent that reads and edits customers&rsquo; books through QuickBooks and bank connections.
+              Platform work on a AI finance agent that reads and edits customers&rsquo; books through QuickBooks and bank connections.
             </p>
             <ul>
-              <li>Deployed self-hosted Langfuse tracing and alerting across every tool call, then consolidated tool descriptions and added a caching layer. Latency fell 60% and the tool-call failure rate went from 80% to 20%.</li>
+              <li>Instrumented every tool call of BOB&rsquo;s AI bookkeeping agent with self-hosted Langfuse tracing and alerting, so failures surface before customers report them.</li>
+              <li>Cut the tool-call failure rate from 80% to 20% and latency 60% by consolidating tool descriptions and adding a caching layer.</li>
               <li>Built a self-healing loop: an agent reviews production failures, writes the fix, and opens a PR. Security-sensitive and architectural changes go to an engineer.</li>
               <li>Moved document ingestion and email processing to open-weight models on Bedrock, cutting cost per user from $45 to about $12.</li>
             </ul>
@@ -2064,16 +2065,16 @@
 
         <article class="entry">
           <div>
-            <div class="entry-time">Mar 2026 to May 2026</div>
+            <div class="entry-time">Mar 2026 to Jun 2026</div>
             <div class="entry-place">Stealth startup &middot; Santa Clara, CA</div>
           </div>
           <div>
             <h3>Sr. Software Engineer</h3>
             <p>
-              Built the founding MVP of a platform that creates digital twins of real consumers, so brands can test products and ads on a simulated panel of 250.
+              Built the founding MVP of a platform that creates digital twins of real consumers, letting brands test products and ads on a simulated panel of 250.
             </p>
             <ul>
-              <li>Owned the A/B ad-research engine end to end, reducing repeated and incoherent questions by 40%.</li>
+              <li>Owned the A/B ad-research engine end to end, cutting repeated and incoherent interview questions 40%.</li>
               <li>Moved inference from hosted frontier models to self-hosted Qwen and DeepSeek on Ollama. Cost per interview fell 60%, from about $25 to under $10, with lower latency.</li>
             </ul>
           </div>
@@ -2081,7 +2082,7 @@
 
         <article class="entry">
           <div>
-            <div class="entry-time">Sep 2025 to Jan 2026</div>
+            <div class="entry-time">Aug 2025 to Jan 2026</div>
             <div class="entry-place"><a href="https://mundane.co/" target="_blank" rel="noopener noreferrer" class="inline-link">mundane</a> &middot; Palo Alto, CA</div>
           </div>
           <div>
@@ -2092,14 +2093,14 @@
             <ul>
               <li>Built the data plane in C++ over raw UDP with custom packetization, sequencing, bounded buffering, and loss recovery. Held p99 latency under 200ms on unreliable networks.</li>
               <li>When control commands began lagging, profiled with perf and Valgrind, traced it to high-rate video saturating a shared reorder buffer, and cut p99 latency 40%.</li>
-              <li>Added Prometheus, Grafana, and OpenTelemetry, and ran 4 containerized services on Kubernetes in GCP at 99.95% uptime.</li>
+              <li>Built telemetry and monitoring dashboards with Prometheus, Grafana and OpenTelemetry, running 4 containerized services on Kubernetes in GCP at 99.95% uptime.</li>
             </ul>
           </div>
         </article>
 
         <article class="entry">
           <div>
-            <div class="entry-time">Oct 2024 to Dec 2025</div>
+            <div class="entry-time">Sep 2024 to Dec 2025</div>
             <div class="entry-place">George Washington University &middot; Washington, D.C.</div>
           </div>
           <div>
@@ -2109,8 +2110,9 @@
             </p>
             <ul>
               <li>Built a quadrotor with PX4 firmware modified in C++ and a fault-injection framework that cut fault detection time by over 60%.</li>
-              <li>Built pipelines streaming 1,000+ events/sec from Vicon and Intel RealSense over UDP at under 200ms latency, giving live ground truth for every flight.</li>
+              <li>Built UDP pipelines streaming 1,000+ events/sec from Vicon motion capture and Intel RealSense, giving live ground truth for every flight.</li>
               <li>Deployed PyTorch anomaly detection on live PX4 telemetry at 93% F1 across attack types.</li>
+              <li>Wrote Slurm job scripts to train the paper&rsquo;s deep learning models across 4 GPUs on the university cluster.</li>
             </ul>
             <p>
               The work sat in <a href="https://sibin.github.io/" target="_blank" rel="noopener noreferrer"
@@ -2145,10 +2147,12 @@
           <div>
             <h3>Backend Developer</h3>
             <p>
-              Owned the backend of Bank of Montreal&rsquo;s equity research platform, growing from sole developer to leading a team of 5. It served analyst reports, stock recommendations, and P&amp;L data to tens of thousands of users.
+              Owned the backend of Bank of Montreal&rsquo;s equity research platform, serving analyst reports, stock recommendations and P&amp;L data to tens of thousands of users.
             </p>
             <ul>
-              <li>Cut p95 load time on the heaviest pages from 5 seconds to under 1 by modularizing the legacy codebase and fixing database indexing. A Memcache to Redis migration alone sped up API requests 62%.</li>
+              <li>Grew from sole backend developer to leading a team of 5.</li>
+              <li>Cut p95 load time on the heaviest pages from 5 seconds to under 1 by modularizing the legacy codebase and fixing PostgreSQL indexing.</li>
+              <li>Migrated caching from Memcache to Redis, speeding API requests 62%.</li>
               <li>Rebuilt a slow, lossy ETL pipeline ingesting stock and trading data from BMO&rsquo;s APIs, restructuring and indexing the data to stop dropped records.</li>
             </ul>
           </div>
@@ -2166,8 +2170,10 @@
             </p>
             <ul>
               <li>Designed all 8 backend services and a RabbitMQ event pipeline carrying chat, alerts, and payments at 10K+ events/sec at peak.</li>
-              <li>When growth overflowed the queues, redesigned for backpressure with autoscaling, dead-letter queues, and rate limiting. Cut API latency 38% and held 99.9% uptime for 2 years as sole infrastructure owner on GCP under HIPAA.</li>
-              <li>Built a clinical decision engine with physicians to choose patient follow-up questions. A feedback loop trained on patient answers and caregiver flags cut irrelevant questions by about 30% in 3 months.</li>
+              <li>Redesigned the event pipeline for backpressure with autoscaling, dead-letter queues and rate limiting after a queue overflow halted notifications and payments, cutting API latency 38%.</li>
+              <li>Ran all infrastructure on GCP under HIPAA as sole owner for 2 years at 99.9% uptime.</li>
+              <li>Worked directly with physicians and caregivers at customer hospitals to build a clinical decision engine that chooses patient follow-up questions.</li>
+              <li>Added a feedback loop trained on patient answers and caregiver flags, cutting irrelevant questions about 30% in 3 months.</li>
             </ul>
           </div>
         </article>
